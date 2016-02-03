@@ -1,0 +1,21 @@
+.rbfimg{width: 85%}
+#rbfslide{width: 49.6%; margin-left: 2%}
+
+.small{width: 49%;
+	display: inline-block;
+	vertical-align: top;}
+
+.systemsFrame::-webkit-scrollbar {width: 0px;}
+.systemsFrame{cursor: move}
+
+img{
+	display: inline-block;
+}
+
+.slick-prev:before, .slick-next:before { 
+    color:#d4d4d4 !important;
+}
+
+.stasis{margin-right:0.5%;}
+
+.rbf{margin-left: 2%}

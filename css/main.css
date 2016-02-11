@@ -11,7 +11,7 @@ html, body {
 	padding-bottom: 1%;
 }
  
-#name{font-size: 18px}
+#name{font-size: 1.24rem}
 
 li{display: inline; padding-left: 5%;}
 
@@ -34,12 +34,11 @@ ul{
 	border-width: 2px;
 }
 
-#menu li a{font-size: 15px;}
+#menu li a{font-size: 1rem;}
 
 a:hover{color:red;}
 a:visted{color:#0eac9c;}
-a{color: #0eac9c; font-family: "Lora", serif;}
-a{font-size: 13px}
+a{color: #0eac9c;}
 
 .index{
 	width: 18%;
@@ -55,18 +54,27 @@ a{font-size: 13px}
 	position: relative;
 	top: -145px;
 	z-index: 12;
-	font-size: 30px;
+	font-size: 2rem;
 	color: white;
 }
 
-.imgtitle:hover{color: white;}
+.imgtitle:hover {color: white;}
 .imgtitle:hover .index{background-color: #0eac9c}
 
 h1{
-	font-size: 22px;
-	line-height: 30px;
+	font-size: 1.5rem;
+	line-height: 2rem;
 	font-weight: 700
 	}
 
-#projectpage{overflow-x:auto;}
-p{width: 55%}
+
+p{width: 40%}
+
+a em{
+	text-decoration: none;
+	font-size: 1rem;
+	border-bottom: none;
+	border-width: 0px;
+	font-style: italic;
+
+}

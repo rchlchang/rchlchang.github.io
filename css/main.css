@@ -78,3 +78,10 @@ a em{
 	font-style: italic;
 
 }
+
+@media (max-width: 1200px) {
+	p {width: 65%}
+	ul{width: 20%}
+	.index{width: 22.5%}
+	.imgtitle{width:22.5%;}
+}

@@ -1,3 +1,3 @@
 javascript:(function(){
-document.body.appendChild(document.createElement('script')).src"http://rchang.pairserver.com/bookmarklet/changebackground.js";
+document.body.appendChild(document.createElement('script')).src="http://rachelchang.net/bookmarklet/wikisearch.js";
 })();

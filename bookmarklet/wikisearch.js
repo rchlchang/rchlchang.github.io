@@ -13,7 +13,7 @@ if (window.jQuery==undefined || window.jQuery.fn.jquery < v){
 
 		if (!done &&(!this.readyState || this.readystate=="loaded" || this.readstate == "complete")){
 			done = true;
-			initMyBookmarket();
+			initMyBookmarklet();
 
 		}
 	};

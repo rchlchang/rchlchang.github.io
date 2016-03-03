@@ -8,7 +8,7 @@ if (window.jQuery==undefined || window.jQuery.fn.jquery < v){
 
 	var done = false;
 	var script = document.createElement("script")
-	script.src = "http://ajax.googleapis.com/ajax/lives/jquery/ " + v + "jquery.min.js";
+	script.src = "http://ajax.googleapis.com/ajax/libs/jquery/ " + v + "/jquery.min.js";
 	script.onload = script.onreadstatechange = function(){
 
 		if (!done &&(!this.readyState || this.readystate=="loaded" || this.readstate == "complete")){
@@ -20,7 +20,7 @@ if (window.jQuery==undefined || window.jQuery.fn.jquery < v){
 
 	document.getElementsByTagName("head")[0].appendChild(script);
 }else{
-	initMyBookmarket();
+	initMyBookmarklet();
 }
 
 function initMyBookmarklet(){

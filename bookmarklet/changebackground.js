@@ -1,34 +1,32 @@
-console.log('Loaded bookmarklet')
+console.log('Loaded Bookmarklet!!!!!!!!!!!!');
 
-javascript:(function(){
+javascript:(function(){											// wrapper to load jQuery, if necessary
+	var v = "1.8";														// the minimum version of jQuery we want
+	// check prior inclusion and version
+	if (window.jQuery === undefined || window.jQuery.fn.jquery < v) {
+		var done = false;
+		var script = document.createElement("script");
+		script.src = "http://ajax.googleapis.com/ajax/libs/jquery/" + v + "/jquery.min.js";
+		script.onload = script.onreadystatechange = function(){
+			if (!done && (!this.readyState || this.readyState == "loaded" || this.readyState == "complete")) {
+				done = true;
+				initMyBookmarklet();
+			}
+		};
+		document.getElementsByTagName("head")[0].appendChild(script);
+	} else {
+		initMyBookmarklet();
+	}
 	
-var v="1.8"; //jQuery version
+	function initMyBookmarklet() {
+		(window.myBookmarklet = function() { 
+			
+			
+			javascript:void(document.bgColor=prompt("what color do you want"));
 
-if (window.jQuery==undefined || window.jQuery.fn.jquery < v){
 
-	var done = false;
-	var script = document.createElement("script")
-	script.src = "http://ajax.googleapis.com/ajax/lives/jquery/ " + v + "jquery.min.js";
-	script.onload = script.onreadstatechange = function(){
 
-		if (!done &&(!this.readyState || this.readystate=="loaded" || this.readstate == "complete")){
-			done = true;
-			initMyBookmarket();
-
-		}
-	};
-
-	document.getElementsByTagName("head")[0].appendChild(script);
-}else{
-	initMyBookmarket();
-}
-
-function initMyBookmarklet(){
-	(window.myBookmarklet = function (){
-
-			javascript:void(document.bgColor=prompt("what color do you want"));}
-
-	}) ();
-}
+		})();	
+	}
 
 })();

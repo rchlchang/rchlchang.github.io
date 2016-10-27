@@ -5,7 +5,11 @@
 	<meta name="keywords" content="rachel, chang, design, communication, designer, user, interface, experience, cmu, carnegie, mellon, graphic">
 	<link rel="stylesheet" href="css/reset.css" />
 	<link rel="stylesheet" href="css/main.css">
-<!-- 	<link rel="stylesheet" href="css/img.css"> -->
+	<link rel="stylesheet" href="css/powertip.css">
+
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.powertip.js"></script>
+	<script src="js/tooltip.js"></script>
 
 <script>
 	  (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
@@ -23,42 +27,26 @@
 </head>
 
 <body>
-	<div id="menu">
-	<a href = "index.html" id="name"> rachel chang</a>
-		<ul>
-		<li><a href = "about.html">about</a></li>
-		<li><a href = "img/resume.pdf" target="_blank">resume</a></li>
-		<li><a href = "mailto:rchlchang@gmail.com">contact</a></li>
-		</ul>
-		<br>
-	</div>
+	<nav>
+	<ul>
+		<li><a href = "index.html"> Rachel Chang</a></li>
+	</ul>
+	<ul class = "second">
+		<li><a href = "about.html" class="menuitem" id="space">About</a></li>
+		<li><a href = "img/resume.pdf" target="_blank" class="menuitem">Resume</a></li>
+		<li><a href = "mailto:rchlchang@gmail.com" class="menuitem">Contact</a></li>
+	</ul>
+	</nav>
 
 
-	<div id="projects">
-			<a href = "stasis.html"><img src = "img/index/stasis.png" alt="stasis" class="index"></a> 
-			<a href = "pm.html"><img src = "img/index/pm.png" alt="pm" class="index"></a>
-			<a href = "symkala.html"><img src = "img/index/sk.png" alt="symkala" class="index"></a>
-			<a href = "systems.html"><img src = "img/index/systems.png" alt="systems" class="index"></a> 
-						
-			
-			<br>
-			<a href = "stasis.html" class="imgtitle">stasis<br><br><em>experimental interaction</em></a>
-			<a href = "pm.html" class="imgtitle">pm<br><br><em>visual & experience design</em></a>
-			<a href = "symkala.html" class="imgtitle">symkala<br><br><em>interaction design & research</em></a>
-			<a href = "systems.html" class="imgtitle">systems<br><br><em>research & visual design</em></a>
-			
-			<br> 
-
-			<a href = "rumors.html"><img src = "img/index/rumors.png" alt="rumors" class="index"></a>
-			<a href = "strain.html"><img src = "img/index/lg2.png" alt="strain" class="index"></a>
-			<a href = "print.html"><img src = "img/index/poster.png" alt="print" class="index"></a>
-			<a href = "play.html"><img src = "img/index/play.png" alt="play" class="index"></a>
-			
-			<br>
-			<a href = "rumors.html" class="imgtitle">rumors<br><br><em>visual design</em></a> 
-			<a href = "strain.html" class="imgtitle">lunar gala<br><br><em>visual design & branding</em></a>
-			<a href = "print.html" class="imgtitle">pamphlet<br><br><em>visual & interaction design</em></a>
-			<a href = "play.html" class="imgtitle">play<br><br><em>experiments & visuals</em></a>
+	<div id="projects home">
+			<br><br><br>
+			<a href="stasis.html"><img src="img/index/stasis.jpg" class="menuItem" title="Stasis"></a>
+			<a href="craig.html"><img src="img/index/craig.jpg" class="menuItem" title="craigslist: North Side"></a>
+			<a href="death.html"><img src="img/index/death.jpg" class="menuItem" title="Life After Death"></a>
+			<a href="systems.html"><img src="img/index/systems.jpg" class="menuItem" title="Systems"></a>
+			<a href="pm.html"><img src="img/index/pm.jpg" class="menuItem" title="Particulate Matter"></a>
+			<a href="print.html"><img src="img/index/print.jpg" class="menuItem" title="Print"></a>
 	</div>
 
 </body>

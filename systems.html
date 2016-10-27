@@ -2,63 +2,65 @@
 <html>
 
 <head>
-<meta charset="UTF-8">
+	<meta charset="UTF-8">
 	<meta name="keywords" content="rachel, chang, design, communication, designer, user, interface, experience, cmu, carnegie, mellon, graphic">
-
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery-migrate.min.js"></script>
-	<script type="text/javascript" src="slick/slick.min.js"></script>
-	<script type="text/javascript" src="js/slideshow.js"></script>
 	
 	<link rel="stylesheet" href="css/reset.css"/>
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/img.css">
-	
+	<link rel="stylesheet" href="css/project.css">
+
 	<title>systems</title>
-	<meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0" />
+	<meta id="meta" name="viewport" content="e-ial-scale=1.0" />
+
+	<script src="https://use.typekit.net/htl2luh.js"></script>
+	<script>try{Typekit.load({ async: true });}catch(e){}</script>
 
 </head>
+
 <body>
-	<div id="menu">
-	<a href = "index.html" id="name"> rachel chang</a>
-		<ul>
-		<li><a href = "about.html">about</a></li>
-		<li><a href = "img/resume.pdf" target="_blank">resume</a></li>
-		<li><a href = "mailto:rchlchang@gmail.com">contact</a></li>
-		</ul>
-		<br>
-	</div>
+	<nav>
+	<ul>
+		<li><a href = "index.html"> Rachel Chang</a></li>
+	</ul>
+	<ul class = "second">
+		<li><a href = "about.html" class="menuitem" id="space">About</a></li>
+		<li><a href = "img/resume.pdf" target="_blank" class="menuitem">Resume</a></li>
+		<li><a href = "mailto:rchlchang@gmail.com" class="menuitem">Contact</a></li>
+	</ul>
+	</nav>
 
-	<div id="projectpage">
-		<h1>systems</h1>
-		<p><br>an exercise in abstractions, scale and arrangement, deriving meaning, untangling complexity, and decoding value and place. i explored a variety of different methods of visualzing abstract systems to deepen an understanding of different subjects that could potentially introduce and design interventions. these exercises were then compiled into a greater system to be communicated to someone unfamiliar with these ideas.</p>
-		<br>
-		<img src = "img/systems/compiled.gif" alt="gif" width="50%"><br>
-		<p><br>the unfolding system is comprised of many smaller systems of touch points, social networks, business models, service, modeling man, conversation, persona, method acting, rapid appraisal, and adaptive systems. as the piece is unfolded, the systems grows and becomes more complex. an acetate sheet provides another layer of information of quantified and quantitative self.</p>
-		<p><br>the systems are organized by their interactions– one model leads to the creation of another model, one models informs the other. while the unfolding form suggests a linear relationship, each model is connected to others at multiple points; the linear narrative allows users to easily unpack the system and experience.  by connecting a variety of smaller systems into a larger one, i was able to uncover deeper connections and see abstractly. </p><br>
-		<img src = "img/systems/use.png" alt="in use" width="36%">
-		<img src = "img/systems/close.png" alt="close" width="36%">
-		<img src = "img/systems/acetate1.png" alt="acetate1" width="36%">
-		<img src = "img/systems/acetate2.png" alt="acetate2" width="36%">
+	<div class="content">
+		<div class="text col">
+			<h1>An exercise in decoding abstractions and untangling complexity</h1>
+			<p> I explored a variety of different methods of visualzing abstract systems. These exercises were then compiled into a single system to create a cohesive experience describing the purpose of each system while also exploring what a system is.</p>
 
+			<p>As the piece is unfolded, the systems grows and becomes more complex. An acetate sheet provides another layer of information of quantified and quantitative self and acts as a "case study" for some of the systems.</p>
 
-		<p><br>scroll to explore. black text provides a basic definition of the system. white text provides insights into connections</p><br>
-		<iframe src="img/systems/systems%20final.png" width="900" height="500" class="systemsFrame"></iframe> 
+			<p>The systems are organized by their interactions– one model leads to the creation of another model, one models informs the other. While the unfolding form suggests a linear relationship, each model is connected to others at multiple points; the linear narrative allows users to easily unpack the system and experience. </p>
+<!-- 
+			touch points, social networks, business models, service, modeling man, conversation, persona, method acting, rapid appraisal, and adaptive systems. -->
 
-<!-- 		<br><em>select systems</em><br>
-		<p><br>method acting</em><br>
-		<br>informed by stanislovsky method acting, this exercise provided
-		 insight into creating personas as well as a method for replicating empathy as much as possible. blah blah watching videos and noting quirks in language, movement, etc. character study can be read <a href="" target="_blank">here</a> <br></p>
+			<a href="" onclick="goBack()"> &#60;&#60; back </a>
+
+		</div>
+		<div class="images col">
+			<img src = "img/systems/compiled.gif" alt="gif" width="50%">
+			<img src = "img/systems/use.png" alt="in use" width="36%">
+			<img src = "img/systems/close.png" alt="close" width="36%">
+			<img src = "img/systems/acetate1.png" alt="acetate1" width="36%">
+			<img src = "img/systems/acetate2.png" alt="acetate2" width="36%">
+		</div>
+
+<!-- 		<em>select systems</em>
+		<p>method acting</em>
+		informed by stanislovsky method acting, this exercise provided
+		 insight into creating personas as well as a method for replicating empathy as much as possible. blah blah watching videos and noting quirks in language, movement, etc. character study can be read <a href="" target="_blank">here</a> </p>
 
 		<em>rapid appraisal</em>
 		<em>soft system</em>
 		<em>adaptive systems</em> -->
 
 	</div>
-
-	<br>
-	<br>
-		<a href="" onclick="goBack()"> &#60;&#60; back </a>
 
 			<script>
 				function goBack() {

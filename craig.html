@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="rachel, chang, design, communication, designer, user, interface, experience, cmu, carnegie, mellon, graphic">
+	
+	<link rel="stylesheet" href="css/reset.css"/>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/project.css">
+	<link rel="stylesheet" href="css/powertip.css">
+
+	<script src="js/jquery.js"></script>
+	<script src="js/jquery.powertip.js"></script>
+	<script src="js/tooltip.js"></script>
+
+	<title>craigslist</title>
+	<meta id="meta" name="viewport" content="e-ial-scale=1.0" />
+
+</head>
+
+<body>
+	<nav>
+	<ul>
+		<li><a href = "index.html"> Rachel Chang</a></li>
+	</ul>
+	<ul class = "second">
+		<li><a href = "about.html" class="menuitem" id="space">About</a></li>
+		<li><a href = "img/resume.pdf" target="_blank" class="menuitem">Resume</a></li>
+		<li><a href = "mailto:rchlchang@gmail.com" class="menuitem">Contact</a></li>
+	</ul>
+	</nav>
+
+	<div class="content">
+		<div class="text col">
+		<h1>An exploration of place based data in Pittsburgh</h1>
+
+		<p>I was curious to see if Pittsburgh was laid out in any sort of <a href="https://goo.gl/yy5QGv" target="_blank">classic urban model</a> and began to explore the type of businesses in the city. I scraped Yelp and focused on the North Side, a neighborhood I was unfamiliar with. Most of the commerce, as listed on Yelp, was concentrated along the shoreline and few points of interest were located farther inland. <a href="http://mathworld.wolfram.com/VoronoiDiagram.html" target="_blank">Voronoi diagrams</a> did not reveal any particularly interesting pattern.</p> 
+		<p>I decided to explore the informal economies of the North Side and scraped craigslist for content for a set of generated posters. Layout was randomly selected from one of three templates, copy and imagery were from the individual posts, the typeface was based upon the category of item, and the color scheme was drawn from a Colourlovers query base on the title of the post. The result is a visualization Pittsburgh's North Side summarized by its residents' wares for sell.</p> 
+
+		<!-- onstructing Voronoi diagrams to investigate proximity making for skewed diagrams -->
+		<a href="" onclick="goBack()"> &#60;&#60; back </a>			
+	</div>
+	
+	<div class= "images col">
+		<img src="img/craig/craigslist.png">
+		<img src="img/craig/active.png" id="small" title="Voronoi diagram of 'active life' businesses" >
+		<img src="img/craig/compile.png" id="small" title="Overlapping Voronoi diagrams">
+		<img src="img/craig/food.png" title="Voronoi test with images">
+	</div>
+
+	<script>
+				function goBack() {
+    			window.history.back();
+				}
+			</script>
+</body>
+
+</html>

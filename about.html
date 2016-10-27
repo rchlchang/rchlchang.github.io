@@ -3,18 +3,14 @@
 
 <head>
 	<meta charset="UTF-8">
-	<script type="text/javascript" src="js/jquery.min.js"></script>
-	<script type="text/javascript" src="js/jquery-migrate.min.js"></script>
-	<script type="text/javascript" src="slick/slick.min.js"></script>
-	<script type="text/javascript" src="js/slideshow.js"></script>
-
 	<meta name="keywords" content="rachel, chang, design, communication, designer, user, interface, experience, cmu, carnegie, mellon, graphic">
 	
 	<link rel="stylesheet" href="css/reset.css"/>
 	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" type="text/css" href="slick/slick.css"/>
-	<link rel="stylesheet" type="text/css" href="slick/slick-theme.css"/>
-	<link rel="stylesheet" href="css/img.css">
+	<link rel="stylesheet" href="css/project.css">
+
+	<script src="js/jquery.js"></script>
+	<script src="js/scrobbler.js"></script>
 	
 	<title>about</title>
 	<meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0" />	
@@ -22,21 +18,33 @@
 </head>
 
 <body>
-	<div id="menu">
-	<a href = "index.html" id="name"> rachel chang</a>
-		<ul>
-		<li><a href = "about.html">about</a></li>
-		<li><a href = "img/resume.pdf" target="_blank">resume</a></li>
-		<li><a href = "mailto:rchlchang@gmail.com">contact</a></li>
-		</ul>
-		<br>
-	</div>
+	<nav>
+	<ul>
+		<li><a href = "index.html"> Rachel Chang</a></li>
+	</ul>
+	<ul class = "second">
+		<li><a href = "about.html" class="menuitem" id="space">About</a></li>
+		<li><a href = "img/resume.pdf" target="_blank" class="menuitem">Resume</a></li>
+		<li><a href = "mailto:rchlchang@gmail.com" class="menuitem">Contact</a></li>
+	</ul>
+	</nav>
 
-	<div id="projectpage">
-		<p>i'm currently pursuing a degree in communication design at carnegie mellon university with a minor in human computer interaction. i'm also working on brand, experience, and digital product development at <a href="http://www.symkala.com/">symkala</a>. i value recognizing and acknowledging the social implications and potential of design, figuring out what it means to design, and finding new spaces where design can intervene. </p><br>
-		<p>i'm also interested in speculative and critical design, social justice, and “new aesthetic.” outside of design, i'm rowing on the allegheny river or casually <a href="https://www.facebook.com/groups/dogspotting/" target="_blank">dogspoting</a>. feel free to <a href = "mailto:rchlchang@gmail.com">ask</a> me about my work or the time i got a boat stuck in a tree.</p><br><br>
-    </div>
+	<div class="content">
+		<div class="text col">
+		<h1>Hi, I'm Rachel</h1>
+<!-- 		<img src="img/index/face.jpg"> -->
+		and I'm currently pursuing a degree in Communication Design at Carnegie Mellon University in Pittsburgh with a minor in Human Computer Interaction. <!-- I'm working on brand experience and digital product development at <a href="http://www.symkala.com/">Symkala </a>. -->
+		<p>I'm interested in making tech humane and accessible as well as exploring how design reinforces entrenched power structures. I'm also interested in speculative and critical design, social justice, and <a href="https://en.wikipedia.org/wiki/New_Aesthetic" target="_blank">New Aesthetic</a>. Outside of design, I'm rowing on the Allegheny, casually <a href="https://www.facebook.com/groups/dogspotting/" target="_blank">Dogspotting</a>, or cleaning up a failed kitchen experiment<!-- , or listening to <h3>test</h3> -->. Feel free to <a href = "mailto:rchlchang@gmail.com">ask</a> me about my work or about the time I got a boat stuck in a tree.</p><br><br>
+
+		<!-- I'm also researching and writing about decolonizing design. I value recognizing and acknowledging the social implications and potential of design, figuring out what it means to design, and finding new spaces where design can intervene. -->
+  
 		<a href="" onclick="goBack()"> &#60;&#60; back </a>
+		</div>
+	</div>
+			<script>
+				
+			document.getElementsByTagName("h3")[0].innerHTML = "Hello World!";
+			</script>
 
 			<script>
 				function goBack() {

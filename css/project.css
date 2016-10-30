@@ -28,6 +28,8 @@ h1{
 	width: 38%;
 	font-size: 1.13rem;
 	line-height: 1.4rem;
+	overflow-y: auto;
+
 }
 
 .images{
@@ -59,6 +61,7 @@ img{
 	overflow: hidden; 
 	max-width: 90%; 
 	margin-bottom: 2rem;
+	z-index: 10;
 	} 
 
 .embed-container iframe, .embed-container object, .embed-container embed{
@@ -69,3 +72,8 @@ img{
 	height: 100%; 
 }
 
+#thirds{
+	width: 27%;
+	display: inline-block;
+	margin: 0 1rem 1rem 0;
+}

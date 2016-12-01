@@ -19,7 +19,7 @@ h1{
 .col{
 	display: inline-block;
 	vertical-align: top;
-	margin-top: 15rem;
+	margin-top: 14.1rem;
 }
 
 .text{
@@ -28,7 +28,6 @@ h1{
 	width: 38%;
 	font-size: 1.13rem;
 	line-height: 1.4rem;
-	overflow-y: auto;
 
 }
 
@@ -76,4 +75,8 @@ img{
 	width: 27%;
 	display: inline-block;
 	margin: 0 1rem 1rem 0;
+}
+
+#peking{
+	background-image: url("../img/sos.gif");
 }

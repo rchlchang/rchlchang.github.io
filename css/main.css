@@ -4,12 +4,11 @@
 
 
 html, body {
-	font-size: 14px;	
+	font-size: 15px;	
 	line-height: 17px;
-/*	color:#121212;*/
 	font-family: 'Karla', sans-serif;
 
-	color: #252525;
+	color: #353535;
 	background: rgb(249,249,249);
     /* background: -webkit-linear-gradient(white, yellow); background: -o-linear-gradient(white, yellow); background: -moz-linear-gradient(white, yellow); background: linear-gradient(white, yellow);  */
     background-attachment: fixed;
@@ -24,7 +23,7 @@ nav{
 /* 	font-weight: 700; */
 	top: 0;
 	max-width: 90%;
-	font-size: 1.1rem;
+	font-size: 1.3rem;
 	font-weight: bold;
 }
 
@@ -64,7 +63,7 @@ a:hover{
 
 .selection p{
 	margin-left: 69vw;
-	margin-top: 24%;
+	margin-top: 22%;
 	font-size: 4rem;
 }
 

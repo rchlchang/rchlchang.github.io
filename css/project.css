@@ -26,7 +26,7 @@ h1{
 	position: fixed;
 	z-index: 10;
 	width: 38%;
-	font-size: 1.13rem;
+	font-size: 1.11rem;
 	line-height: 1.4rem;
 
 }
@@ -38,8 +38,7 @@ h1{
 }
 
 img{
-/* 	border: 2px solid black; */
-	box-shadow: 6px 6px 19px -4px rgba(0,0,0,0.41);
+/* 	box-shadow: 6px 6px 19px -4px rgba(0,0,0,0.41); */
 	width: 85%;
 	position: relative;
 	z-index: 10;
@@ -52,6 +51,17 @@ img{
 	display: inline-block;
 	margin: 0 1rem 1rem 0;
 }
+
+#quarter{
+	width: 20%;
+	display: inline-block;
+	margin: 0 1rem 1rem 0;
+}
+
+.lastimg{
+	margin: 0 0 0 0;
+}
+
 
 .embed-container{
 	position: relative; 
@@ -80,3 +90,17 @@ img{
 #peking{
 	background-image: url("../img/sos.gif");
 }
+
+.item {
+  width: 100%;
+  display: inline-block;
+  margin: 0 0 .2em;
+}
+
+.grid{
+	margin-top: 5%;
+	column-count: 3;
+	column-gap: .1em;
+}
+
+.item a:hover{background-color: transparent;}

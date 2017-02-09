@@ -8,12 +8,13 @@ html, body {
 	line-height: 17px;
 	font-family: 'Karla', sans-serif;
 	color: #353535;
-	background: rgb(249,249,249);
+/* 	background: rgb(249,249,249); */
     /* background: -webkit-linear-gradient(white, yellow); background: -o-linear-gradient(white, yellow); background: -moz-linear-gradient(white, yellow); background: linear-gradient(white, yellow);  */
     background-attachment: fixed;
     background-size: contain;
     margin: 1rem 2rem;
     overflow-x: hidden;
+    z-index: -1;
 }
 
 /* violet , magenta, lavenderblush , yellow, salmon */
@@ -41,7 +42,7 @@ li{
 }
 
 
-a:hover{
+li a:hover{
 	background-color: yellow;
 }
 

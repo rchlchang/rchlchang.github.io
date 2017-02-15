@@ -104,6 +104,8 @@ h2 a:hover{
 	text-align: center;
 	font-size: .8rem;
 	line-height: .8rem;
+	padding: .4rem;
+	opacity: .5;
 }
 
 .imghover{
@@ -115,4 +117,19 @@ h2 a:hover{
 	opacity: .4;
 	-webkit-filter: grayscale(100%); /* Safari 6.0 - 9.0 */
     filter: grayscale(100%);
+}
+
+.desc{
+/* 	width: 100%; */
+	text-align: center;
+	font-size: .95rem;
+/* 	padding: 0; */
+}
+
+nav + div {
+	margin-top: 7vh;
+}
+
+.intro {
+	width: 90%;
 }

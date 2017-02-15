@@ -96,12 +96,6 @@ h2{
 	font-weight: bold;
 }
 
-h3{
-	display: inline;
-	-webkit-margin-before: 0;
-	-webkit-margin-after: 0;
-}
-
 title br{
 	font-style: italic;
 }

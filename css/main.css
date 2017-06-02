@@ -31,18 +31,18 @@ nav{
 	right: 2rem;
 }
 
-ul{
+nav ul{
 	list-style-type: none;
 	position: fixed;
 	z-index: 20;
 }
 
-li{
+nav ul li{
 	display: inline;
 }
 
 
-li a:hover{
+nav ul li a:hover{
 	background-color: yellow;
 }
 
@@ -99,7 +99,6 @@ h2{
 title br{
 	font-style: italic;
 }
-
 
 
 

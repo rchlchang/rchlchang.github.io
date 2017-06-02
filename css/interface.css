@@ -1,0 +1,23 @@
+@import url('https://fonts.googleapis.com/css?family=Cousine|Lora|Roboto+Mono|PT+Serif');
+
+body{
+	font-size: 19px;
+	font-family:'PT Serif', sans-serif;
+	line-height: 2rem;
+	margin: 5rem;
+}
+
+p{
+	margin-bottom: 2rem;
+	width: 60%;
+}
+
+h1{
+	font-family: 'Cousine', serif;
+}
+
+img{
+	float: right;
+	background-color: green;
+	vertical-align: bottom;
+}

@@ -141,3 +141,13 @@ nav + div {
 	margin-top: -1rem;
 	margin-bottom: 1rem;
 }
+
+
+b{
+	font-weight: bold;
+}
+
+.list{
+	width: 60%;
+}
+

@@ -5,8 +5,7 @@ img{
 	/* box-shadow: 6px 6px 19px -4px rgba(0,0,0,0.41);
 	width: 85%; */
 	position: relative;
-	margin-bottom: 2%;
-	margin-top: 2%;
+	padding: 1.3rem 0;
 }
 
 h1{
@@ -27,9 +26,9 @@ h1{
 
 h3{
 	font-family: 'Merriweather', serif;
-	margin-left: 12.5%;
+	margin: 1.7rem 0 .8rem 12.5%;
 	font-weight: 700;
-	font-size: 1.9rem;
+	font-size: 2rem;
 	line-height: 3.5rem;
 	opacity: .9;
 }
@@ -46,6 +45,7 @@ p{
 .half{width: 49.5%; display: inline-block;}
 .third{width: 32.667%; display: inline-block;}
 .fourth{width: 24.25%; display: inline-block;}
+.singlesmall{width: 78%; display: inline-block;}
 
 /* .embed-container{
 	position: relative; 

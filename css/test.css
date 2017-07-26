@@ -41,13 +41,19 @@ p{
 	line-height: 2rem;
 }
 
-.margin{margin-right: 1%;}
+.margin{margin-right: .5rem;}
 .half{width: 49.5%; display: inline-block;}
 .third{width: 32.667%; display: inline-block;}
-.fourth{width: 24.25%; display: inline-block;}
+.fourth{width: 24%; display: inline-block;}
 .singlesmall{width: 78%; display: inline-block;}
 .five{width: 68%; display: inline-block; }
 .three{width: 31%; display: inline-block;}
+
+.one{width: 29%; display: inline-block;}
+.two{width: 70%; display: inline-block; }
+
+.a{width: 54%; display: inline-block;}
+.b{width: 45%; display: inline-block; }
 
 /* .embed-container{
 	position: relative; 

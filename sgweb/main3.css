@@ -1,40 +1,61 @@
-@import url('https://fonts.googleapis.com/css?family=Work+Sans:300,500,600');
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
 
 body{
 	font-size: 20px;
-	background: black;
-	color: white;
+	background: #f7f4f4;
+	color: #1c1c1c;
 	font-family: 'Work Sans', sans-serif;
-	font-weight: 300;
-	line-height: 1.8rem;
-	margin: 5rem 0 0 5rem;
+	font-weight: 400;
+	line-height: 1.7rem;
+	margin: 4rem 0 0 5rem;
 
 }
 
 /*.content{flex: 1;}*/
 
+/*right corner*/
 h1{
-	font-size: 11rem;
-	font-weight: 600;
-	-webkit-text-stroke: 1px white;
+	font-size: 18.8vw;
+	font-weight: 700;
+	-webkit-text-stroke: 1px DarkGray;
 	color: transparent;
 	position: fixed;
-	right: 0;
-	bottom: 43;
+	right: -2vw;
+	top: 89vh;
+/*	top: 50%;
+	transform: translateY(-50%);*/
+	z-index: -2
 }
+
+/*center*/
+/*h1{
+	font-size: 18.5vw;
+	font-weight: 400;
+	color: #00ff21;
+	position: fixed;
+	top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+	z-index: -2;
+	display: inline
+}*/
 
 #coord{
-	font-size: 3rem;
-	bottom: 120;
+	font-size: 9vw;
+	top:90vh;
 }
 
-p{width: 50%; margin-bottom: 1rem}
+p{width: 55%; margin-bottom: 1rem}
 
 .contact{
-	border: 1px solid white;
+	border: 1px solid black;
+	color: #1c1c1c;
+	text-decoration: none;
 	text-align: center;
 	width: 10%;
+	padding: .3rem .5rem;
 }
+
 /*
 ul{
 	position:fixed;

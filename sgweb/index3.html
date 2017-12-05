@@ -1,35 +1,66 @@
-<html>
-<head>
-	<link rel="stylesheet" href="reset.css"/>
-	<link rel="stylesheet" href="main3.css">
-	<script src="function.js"></script>
+@import url('https://fonts.googleapis.com/css?family=Work+Sans:400,700');
 
-	<title>3</title>
-</head>
-<body>
-<!-- 	<main class="content"> -->
-<!-- 	<h1 id="coord">34.052 118.244 40.440 79.996 40.713 74.006</h1> -->
-	<h1>SPINGLASS</h1>
+body{
+	font-size: 20px;
+	background: #f7f4f4;
+	color: #1c1c1c;
+	font-family: 'Work Sans', sans-serif;
+	font-weight: 400;
+	line-height: 1.7rem;
+	margin: 4rem 0 0 5rem;
 
-	<p>Many companies make technology and release it into the  wilderness, taking little responsibility for its impact. SpinGlass is different. We not only pioneer the research and development of new technologies, we carefully design and optimize its integration in society through strategic partnerships. We mindfully advance a technology enabled society to generate new markets and growth opportunities.</p>
-	
-	<p>SpinGlass.AI is a Pittsburgh-based hybrid technology consultancy fueling the widespread adoption of emerging AI technologies.</p> 
-	
-	<p>Working closely with our corporate partners, we inject transformational technologies within sleepy industries, opening opportunities for new business models and financial opportunities. To do this, we invest in new companies, acquire emerging technologies, and utilize a fusion of engineering and design methods.</p>
-	
-	<p>Our work not only enhances their business, but enables their mission to impact the world.</p>
-	<div class="contact">Contact →</div>
-<!-- 	</main> -->
+}
 
-<!-- 	<ul>
-		<li>34.0522 118.2437</li>
-		<li>40.4406 79.9959</li>
-		<li>40.7128 74.0060</li>
-	</ul> -->		
+/*.content{flex: 1;}*/
 
+/*right corner*/
+h1{
+	font-size: 18.8vw;
+	font-weight: 700;
+	-webkit-text-stroke: 1px DarkGray;
+	color: transparent;
+	position: fixed;
+	right: -2vw;
+	top: 89vh;
+/*	top: 50%;
+	transform: translateY(-50%);*/
+	z-index: -2
+}
 
-</body>
-</html>
+/*center*/
+/*h1{
+	font-size: 18.5vw;
+	font-weight: 400;
+	color: #00ff21;
+	position: fixed;
+	top: 50%;
+    left: 50%;
+    transform: translateX(-50%) translateY(-50%);
+	z-index: -2;
+	display: inline
+}*/
 
+#coord{
+	font-size: 9vw;
+	top:90vh;
+}
 
+p{width: 55%; margin-bottom: 1rem}
 
+.contact{
+	border: 1px solid black;
+	color: #1c1c1c;
+	text-decoration: none;
+	text-align: center;
+	width: 10%;
+	padding: .3rem .5rem;
+}
+
+/*
+ul{
+	position:fixed;
+	right: 0;
+	-webkit-text-stroke: .5px white;
+	color: transparent;
+	font-weight: 500;
+}*/

@@ -32,37 +32,49 @@
 	<div class="content">
 	<h1>Improving client efficiency and transparency</h1>
 		
-		<p>In the past year I've been working on improving internal efficiency and transparency with a portfolio of B2B clients. This has involved research, production, video and clickable prototypes, code proof of concepts, dashboards. One particular project was a interface refactor that resulted in an 80% decrease in data entry time.
+		<p>In the past year I've been working on improving internal efficiency with a portfolio of B2B clients. This has involved interviewing stakeholders, producing video and clickable prototypes, and coding proof of concept dashboards. One particular project was a interface refactor that resulted in an 80% decrease in data entry time.
 
-		<img src="img/fibo/all.png">
+		<img src="img/tl/final.png">
 		<h3>Scope and Research</h3>
 
-		<p>To kick off our partnership with the client, I met with leadership and staff, conducted observational studies and ridealongs, and studied internal training documents to understand their processes, relationships, and key business levers. By visualizing their business as a service blueprint, the client and I were able to discuss and identify process optimization opportunities.</p>
+		<p>I started the research process by reviewing internal training documents and then met with inside and outside sales staff, conducting observational studies and ridealongs, to learn the day to day and build a service blueprint. </p>
 
-		<p>In conversations with leadership, they listed sales person time usage as an area for improvement; cold calling clients vs data entry was eating up more time than they would have liked. Middle management was also stuck reviewing and revising entered data instead of focusing on strategy.(mention account gen)</p> 
+		<img src="img/tl/blueprint.png">
 
-		<p> early ideas included utilising OCR engine, but the complexity in the data ontology made it clear it was an excessively labourous task.
-		problem wasnt that people were bad at interpreting but that the software interface didn't match the mental models of the invoice or the human. expressed challenged in training staff: they had to interpret documents and data as well as the software interface. Reconcile the discrepencies between the data ontology, the user's mental model, and the software UI.</p>
-		
-		I conducted an informal UX audit and found that there were usability issues. I backed this up by modified observational key stroke level modeling. Users were excessively (scrolling or whatever)
-		
+		<p>I then sat down with leadership to understand what their goals and pain points, using the service blueprint as a conversation starter. For the first phase of work, we chose to focus on sales processes. Sales and operations leadership brought up data entry as an area for improvement; it was eating up sales staff’s as well as middle management's time.</p>
 
-		<h3>Production & Iteration</h3>
+		<p>I discussed various ideas with my team, including a data intake form and an OCR engine, but one  observation stuck out: multiple individuals  printed out bills and annotated them before entering them; there was a clear disconnect between the reality of the bills and the data entry. Becausde of this observation and a impact/complextiy analysis, we decided to move forward with a interface refactor </p>
 
-		<p>Based on the prior research, I focsed my effort on making all the components and messaging consistent/establishing a design languge and reworking the overall interface to be more compatible with how people actually work. 
+		<p>To further prepare for the pitch, I performed a modified keystroke level model (KLM) to better quantify inefficiencies and recurring patterns of use. A usability evaluation was also conducted, and I identified inconsistent terminology, visual elements, inefficient use of screen space, etc. </p>
 
-		The development team had planned to adopt Ant Design as part of their new development workflow, so I created component guidelines for their specific usage.</p>
+		<img src="img/tl/obs.png" class="third margin"><img src='img/tl/klm.png' class="third margin"><img src='img/tl/audit.png' class="third">
+		<div class="caption">Observing staff, KLM data, usability notes (L to R) </div>
+ 		
+ 		<h3>Production & Iteration</h3>
 
-		<b>some ui component rules???</b>
+		<p>Based on myresearch, the refactor needed to reduce time spent scrolling, pointing, and mentally processing, refine information density and legibility, and establish a component system. I was also concerned with keeping the changes minimal; implementation was to be done by the client's engineering team. With their guidance, I used Ant Design components to start the redesign.</p>
 
-		<p>I went through multiple iterations, from most to least drastic changes to accomodate their tolerance for change.</p>
+		<!-- through improving layout (e.g. key actions should always be within reach)
+ -->
+		<img src="img/tl/original.png" class="half margin"><img src='img/tl/original.png' class="half">
+		<div class="caption">Original UI, Redesigned UI </div>
 
+		<p>Second round of iterations focused on limit interactions to a single page (no page redirects) and reducing and simplifying information. I also moved away from tables and thought along the lines of an online shopping cart metaphor.
+
+		I added key metrics at the top of the page to allow for skimming and displayed line items as “cards” rather than tables to legibility and reduce cognitive load.</p> 
+
+		<img src="img/tl/original.png" class="half margin"><img src='img/tl/original.png' class="half">
+		<div class="caption">Original UI, Redesigned UI </div>
 
 		<h3>Testing & Deployment</h3>
 
-		<p>After rounds of leadership feedback, I conducted (look at bruces book) with the sales team to validate decisions and collect user feedback. (what was something i learned uh)</p>
+		<p>After rounds of leadership feedback, I sat down with the sales team and tested a clickable prototype. to validate decisions and collect user feedback. (what was something i learned uh)</p>
+		
+		<img src="img/tl/original.png">VIDEO HERE
+
 		<p>After final screens and prototypes were delivered, I continued working with their front end developer to ensure a smooth delivery.
-		According to the client feedback, the redesigned interface decreased data entry time by 80%.</p>
+		According to client feedback, the redesigned interface decreased data entry time by 80%.</p>
+
 
 
 

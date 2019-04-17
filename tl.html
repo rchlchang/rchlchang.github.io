@@ -2,7 +2,7 @@
 <html class="staticrypt-html">
 <head>
     <meta charset="utf-8">
-    <title>Protected Page</title>
+    <title>protected page</title>
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <!-- do not cache this page -->
@@ -12,132 +12,68 @@
     <meta http-equiv="expires" content="Tue, 01 Jan 1980 1:00:00 GMT"/>
     <meta http-equiv="pragma" content="no-cache"/>
 
+    <link rel="stylesheet" href="css/reset.css"/>
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/test.css">
+
     <style>
-        .staticrypt-hr {
-            margin-top: 20px;
-            margin-bottom: 20px;
-            border: 0;
-            border-top: 1px solid #eee;
-        }
+        form { width: 90%; margin: auto;}
 
-        .staticrypt-page {
-            width: 360px;
-            padding: 8% 0 0;
-            margin: auto;
-            box-sizing: border-box;
-        }
-
-        .staticrypt-form {
-            position: relative;
-            z-index: 1;
-            background: #FFFFFF;
-            max-width: 360px;
-            margin: 0 auto 100px;
-            padding: 45px;
-            text-align: center;
-            box-shadow: 0 0 20px 0 rgba(0, 0, 0, 0.2), 0 5px 5px 0 rgba(0, 0, 0, 0.24);
-        }
-
-        .staticrypt-form input {
+        input {
             outline: 0;
             background: #f2f2f2;
-            width: 100%;
             border: 0;
-            margin: 0 0 15px;
             padding: 15px;
-            box-sizing: border-box;
-            font-size: 14px;
+            font-size: 15px;
         }
 
-        .staticrypt-form .staticrypt-decrypt-button {
+        .staticrypt-decrypt-button {
             text-transform: uppercase;
-            outline: 0;
-            background: #4CAF50;
-            width: 100%;
+            background: black;
             border: 0;
             padding: 15px;
             color: #FFFFFF;
-            font-size: 14px;
             cursor: pointer;
         }
 
-        .staticrypt-form .staticrypt-decrypt-button:hover, .staticrypt-form .staticrypt-decrypt-button:active, .staticrypt-form .staticrypt-decrypt-button:focus {
-            background: #43A047;
+        .staticrypt-decrypt-button:hover, .staticrypt-form .staticrypt-decrypt-button:active, .staticrypt-form .staticrypt-decrypt-button:focus {
+            background: yellow;
+            color: black;
         }
 
-        .staticrypt-html {
-            height: 100%;
-        }
 
-        .staticrypt-body {
-            margin-bottom: 1em;
-            background: #76b852; /* fallback for old browsers */
-            background: -webkit-linear-gradient(right, #76b852, #8DC26F);
-            background: -moz-linear-gradient(right, #76b852, #8DC26F);
-            background: -o-linear-gradient(right, #76b852, #8DC26F);
-            background: linear-gradient(to left, #76b852, #8DC26F);
-            font-family: "Arial", sans-serif;
-            -webkit-font-smoothing: antialiased;
-            -moz-osx-font-smoothing: grayscale;
-        }
 
-        .staticrypt-instructions {
-            margin-top: -1em;
-            margin-bottom: 1em;
-        }
-
-        .staticrypt-title {
-            font-size: 1.5em;
-        }
-
-        .staticrypt-footer {
-            position: fixed;
-            height: 20px;
-            font-size: 16px;
-            padding: 2px;
-            bottom: 0;
-            left: 0;
-            right: 0;
-            margin-bottom: 0;
-        }
-
-        .staticrypt-footer p {
-            margin: 2px;
-            text-align: center;
-            float: right;
-        }
-
-        .staticrypt-footer a {
-            text-decoration: none;
-        }
     </style>
 </head>
 
-<body class="staticrypt-body">
-<div class="staticrypt-page">
-    <div class="staticrypt-form">
-        <div class="staticrypt-instructions">
-            <p class="staticrypt-title">Protected Page</p>
-            <p></p>
+<body>
+    <nav>
+    <ul>
+        <li><a href = "index.html"> Rachel Chang</a></li>
+    </ul>
+    <ul class = "second">
+        <li><a href = "about.html" class="menuitem" id="space">About</a></li>
+        <li><a href = "img/resume.pdf" target="_blank" class="menuitem">Resume</a></li>
+        <li><a href = "mailto:rchlchang@gmail.com" class="menuitem">Contact</a></li>
+    </ul>
+    </nav>
+
+        <div class="content">
+        <h1>Protected Page</h1>
+        <br>
+            <form id="staticrypt-form" action="#" method="post">
+                <input id="staticrypt-password" type="password" name="password" placeholder="Enter Password"autofocus/><input type="submit" class="staticrypt-decrypt-button" value="See Project"/>
+            </form>
         </div>
+        <br><br>
+        <a href="" onclick="goBack()"> &#60; back </a>
 
-        <hr class="staticrypt-hr">
+        <script>
+            function goBack() {
+            window.history.back();
+            }
+        </script>
 
-        <form id="staticrypt-form" action="#" method="post">
-            <input id="staticrypt-password"
-                   type="password"
-                   name="password"
-                   placeholder="passphrase"
-                   autofocus/>
-
-            <input type="submit" class="staticrypt-decrypt-button" value="DECRYPT"/>
-        </form>
-    </div>
-
-</div>
-<footer class="staticrypt-footer">
-    <p class="pull-right">Created with <a href="https://robinmoisson.github.io/staticrypt">StatiCrypt</a></p>
-</footer>
 
 
 <script>/**
@@ -6145,7 +6081,7 @@
             decryptedHMAC = CryptoJS.HmacSHA256(encryptedHTML, CryptoJS.SHA256(passphrase).toString()).toString();
 
         if (decryptedHMAC !== encryptedHMAC) {
-            alert('Bad passphrase!');
+            alert('Wrong Password');
             return;
         }
 

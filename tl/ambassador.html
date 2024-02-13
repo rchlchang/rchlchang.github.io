@@ -1,0 +1,165 @@
+
+<head>
+	<link rel="stylesheet" href="../reset.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@200;300&family=Karla:wght@300;400&display=swap" rel="stylesheet">
+
+<!-- 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="../bootstrap-grid.css">
+	<link rel="stylesheet" href="../style.css">
+	<title>Tulco Labs: Ambassador Prospecting</title>
+	<meta id="meta" name="viewport" content="e-ial-scale=1.0">
+</head>
+
+
+<body>
+	<div class="menu">
+		<div class="menuLink"><a href="../index.html">Rachel Chang</a></div>
+		<div><a href="../about.html" style="padding:1rem">About</a>
+		<a href="mailto:rchlchang@gmail.com">Contact</a></div>
+	</div>
+
+	<div class="row g-0"> 
+		<div class="col-md-3 d-none d-md-block leftLine job" style="border:none">
+			<div class="line job sectionLink"><a href="../charge/charge.html">
+				<div class="date"><p>'20 - </p></div>
+				<div class="jobTitle">
+					<p>Chargepoint</p>
+					<p class="role">Senior User Experience Designer</p>
+				</div>
+			</div></a>
+
+			<div class="line job sectionLink"><a href="../tl/tl.html">
+				<div class="date"><p>'17 - '20</p></div>
+				<div class="jobTitle">
+					<p>Tulco Labs</p>
+					<p class="role">User Experience Designer</p>
+				</div>
+			</div></a>
+
+			<div class="line job sectionLink"><a href="../cmu/cmu.html">
+				<div class="date"><p>'13 - '17</p></div>
+				<div class="jobTitle">
+					<p>Carnegie Mellon University</p>
+					<p class="role">BFA in Communication Design, Minor in Human Computer Interaction</p>
+				</div>
+			</div></a>
+		</div>
+
+		<div class="col-md-3 d-none d-md-block leftLine job">
+			<div class="line sectionLink"><a href="ambassador.html">
+				<div class="projectTitle">
+					<p>Ambassador Prospecting</p>
+					<p class="role">Automating manual processes</p>
+				</div>
+			</div></a>
+
+			<div class="line sectionLink"><a href="input.html">
+				<div class="projectTitle">
+					<p>Data Entry Tool Refactor</p>
+					<p class="role">Improving client efficiency</p>
+				</div>
+			</div></a>
+		</div>
+
+		<div class="col leftLine" id="content">
+			<div class="line d-md-none d-block" style="border: none; padding: 0"><p style="font-size:.75rem"><a href="../tl/tl.html">↶ Back</a></p></div>
+			
+			<div class="line">
+				<h1>Ambassador Prospecting</h1>
+				<p class="team">Team: Project Manager, Full Stack Engineer, Machine Leaning Engineer</p>
+				<p>Ambassador Prospecting <b>automates the discovery of qualified influencers</b> suitable for influencer marketing and streamlines a highly manual process spread across multiple tools.</p>
+				<p>Using the tool, the client is able to <b> more quickly review qualified outbound candidates and inbound candidates</b>.</p>
+				<img src="../img/tl/amb/3lead.png" alt="Software interface for evaluating ambassadors" class="pb-4">
+			</div>
+
+			<div class="line">
+				<h2>Problem Scope</h2>
+				<div class="row">
+					<div class="col-12 col-lg">
+						<p>The client uses influencer marketing to generate marketing content and brand awareness. They wanted to more than double the number of ambassadors and improve occupational and geographic diversity. Their<b> process was highly manual, and off the shelf tools returned candidates that didn't match the brand's standards</b>.</p>
+						<!-- <p>The client's ideal ambassador is a medical professional with a sizable following that loves and uses their products. Ambassadors should post inspiring, positive, and educational content speaking candidly about the realities of working in the medical field, one to three times a week.</p> -->
+						<p>My team scraped leads from comments on the client’s posts. These leads were then rated as “Strong,” “Undecided,” or “Weak” matches based on various features, and the client was asked to evaluate the accuracy of the machine generated ratings. After adjusting the scoring engine based on user feedback, we felt confident in building a usable lead generation tool.</p>
+					</div>
+					<div class="col-12 col-lg"><img src="../img/tl/amb/v0.png" alt="Lead scoring tool"></div>
+				</div>
+			</div>
+
+			<div class="line">
+				<h2>Research</h2>
+				<p> I met with the ambassador program director to discuss her workflow and painpoints and diagramed her process and how it might look after our intervention. My key takeaways from that conversation were:</p>
+
+				<ul class="pb-2">
+					<li><b>The workflow is spread across many tools</b>. Outbound leads are saved in Instagram, free text notes, emails, and spreadsheets. Inbound leads reach out through Instagram messages and emails and then fill out a Google Form. These leads are reviewed and copied into another spreadsheet.</li>
+					<li><b>Scoring candidates is a binary decision</b>.The proof of concept delivered "Strong," "Undecided," and "Weak" leads and the user scored them as "Good," "Okay," or "Bad" fits. In reality, an "Okay" candidate would be passed over, due the sheer volume of leads.</li>
+					<li><b>Engagement, follower metrics, and content quality are the primary deciding factors</b>. While the inbound lead form involves free text questions, these answers are the last feature reviewed. The mentioned metrics are used first to evaluate leads. </li>
+				</ul>
+
+				<img src="../img/tl/amb/flow0.png" alt="Diagram of Ambassador Director's workflow" class="pb-2">
+				<img src="../img/tl/amb/flow1.png" alt="Diagram of Ambassador Director's workflow with our software" class="pb-2">
+			</div>
+
+			<div class="line">
+				<h2>Exploration</h2>
+				<p>With the research in mind, I began figuring out how leads would be displayed on the screen. I explored presenting various types of candidate information, such as Instagram bios and account age, in different ways. Due to scraper limitations and best data practices, we decided to display three main metrics: Followers, Engagement Rate, and Post Cadence. </p>
+				<img src="../img/tl/amb/cards.png" alt="Iterations of card and table visuals" class="pb-2">
+				<!-- <div class="subtitle mb-4 mt-3">Card and table iterations</div> -->
+
+				<div class="row imgRow pb-2">
+					<div class="col"><img src="../img/tl/amb/screen1.png" alt="Layout iteration for ambassador software"></div>
+					<div class="col"><img src="../img/tl/amb/screen2.png" alt="Layout iteration for ambassador software"></div>
+					<div class="col"><img src="../img/tl/amb/screen3.png" alt="Layout iteration for ambassador software"></div>
+				</div>
+				<!-- <div class="subtitle mb-4 mt-3">Layoutiterations</div> -->
+
+				<div class="col pb-4"><img src="../img/tl/amb/cards2.png" alt="Color and scoring iterations"></div>
+				<!-- <div class="subtitle mb-4 mt-3">Color and scoring iterations</div> -->
+
+				<p>I then switched to designing in HTML/CSS to accomodate a two week release cycle so the client could continuously test the tool. </p>
+				<p> We reviewed user activity to ensure the scoring engine was still accurate but noticed the client was only evaluating ”Strong” leads, leaving “Undecided” leads untouched. The different between “Strong” and “Undecided” was arbitrarily set at 85% (“Strong” candidates have a 85% or higher chance of being a good fit). “Undecided” leads were still good candidates, but the language made them seem like a poor fit.</p>
+
+				<div class="row imgRow">
+					<div class="col"><img src="../img/tl/amb/1lead.png"></div>
+					<div class="col"><img src="../img/tl/amb/2lead.png"></div>
+				</div>
+
+				<p>This posed a problem because we needed a diversity of ratings to keep the engine accurate. We needed to be sensitive to different priorities: the client's goal is to get as many qualified candidates as possible, whereas, internally, we were concerned with the accuracy of scoring. My team considered various solutions, but we settled on displaying ratings as a 12 step gradient to encourage more nuanced evaluation. </p>
+				
+				<img src="../img/tl/amb/gradient.png" alt="Cards with ambassador leads in twelve grades" class="pb-4">
+
+			</div>
+
+			<div class="line">
+				<h2>Resolution</h2>
+				<p>For the final release, I adjusted the visuals to better fit the client's existing brand. </p>
+				<img src="../img/tl/amb/3lead.png" alt="Main unscored view" class="pb-2">
+				<!-- <div class="subtitle mb-4">Main unscored view</div> -->
+				<div class="row imgRow">
+					<div class="col"><img src="../img/tl/amb/modal.png" alt="Expanded modal with inbound application responses"></div>
+					<!-- <div class="subtitle mb-4">Expanded modal with inbound application responses</div> -->
+					<div class="col"><img src="../img/tl/amb/reviewed.png" alt="Scored leads"></div>
+					<!-- <div class="subtitle mb-4">Scored leads</div> -->
+					<div class="col"><img src="../img/tl/amb/export.png" alt="Exporting scored leads"></div>
+					<!-- <div class="subtitle mb-4">Exporting scored leads</div> -->
+				</div>				
+			</div>
+
+			<div class="line">
+				<h2>Future Considerations</h2>
+				<ul>
+					<li><b>Data options</b><br>
+						It would be helpful if recent posts could be included in each card, as content is a key factor when evaluating candidates. User bios are also important, and the ability to search for certain keywords would be helpful when seeking out specific types of professionals (e.g. vetenarians) for the ambassador program.</li>
+					<li><b>Fluid interactions</b><br>
+						Certain interactions, such as record editing, are a bit clunky, as we avoided using JavaScript.</li>
+					<li><b>Further automation</b><br>
+						There are more opportunities to further reduce friction and time spent such as exporting directly to the client's database/spreadsheet tool or automated emails to approved candidates.</li>
+					<li><b>Limited Scope</b><br>
+						Our solution on addresses one aspect of the Ambassador Director's job. As the program scales, ambassador management will become a constraint.</li>
+				</ul>
+			</div>
+
+		</div>
+	</div>
+
+</body>
+

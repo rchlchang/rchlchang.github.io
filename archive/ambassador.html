@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="keywords" content="rachel, chang, design, communication, designer, user, interface, experience, cmu, carnegie, mellon, graphic">
+	
+	<link rel="stylesheet" href="css/reset.css"/>
+	<link rel="stylesheet" href="css/main.css">
+	<link rel="stylesheet" href="css/test.css">
+	<link rel="stylesheet" href="css/grid.min.css">
+
+
+	<script src="js/jquery.js"></script>
+
+	<title>tulco labs: ambassador</title>
+	<meta id="meta" name="viewport" content="e-ial-scale=1.0" />
+
+</head>
+
+<body>
+	<nav>
+	<ul>
+		<li><a href = "index.html"> Rachel Chang</a></li>
+	</ul>
+	<ul class = "second">
+		<li><a href = "about.html" class="menuitem" id="space">About</a></li>
+		<li><a href = "img/resume.pdf" target="_blank" class="menuitem">Resume</a></li>
+		<li><a href = "mailto:rchlchang@gmail.com" class="menuitem">Contact</a></li>
+	</ul>
+	</nav>
+
+	<div class="content">
+		<h1>what the hell is this</h1>
+
+		<div class="col-9 mx-auto">
+			Ambassador Prospecting automates the discovery of qualified influencers to partner with for influencer marketing and streamlines what was previously a highly manual process spread across multiple tools. (, and enables the client to scale thier ambassador program faster) Building a community of ambassadors for organic marketing allows the client to deepen and extend customer relationships.
+		</div>
+		<img src="img/tl/a/3lead.png" class="col-9 p-0">
+
+		<h3>Preface & Research</h3>
+		<div class="col-9 mx-auto">
+			The Ambassador Prospecting proof of concept(below) was designed to have the user evaluate the accuracy of the scoring engine. Once we were confident in the scoring engine, Ambassador Prospecting then became focused on enabling the client to discover and qualify leads faster.
+		</div>
+
+		<img src="img/tl/a/v0.png" class="col-8 p-0">
+
+		<img src="img/tl/a/flow.png" class="col-11 p-0 mb-4 shadow">
+
+		<div class="col-9 mx-auto mb-3">
+			I first visualized the workflow (above) to identify my own knowledge gaps and any questions I needed to answered. I met with the primary user to discuss their current workflow, mental models, processes for evaluating leads, and any pain points to understand how Ambassador Prospecting could best deliver impact. From that conversation, my key takeaways were:
+		</div>
+		<div class="col-6 mx-auto mt-2">
+			<b>1) The workflow is spread across many tools</b> <br>Outbond leads are saved in Instagram, free text notes, email, and spreadsheets. Inbound leads reach out through Instagram Direct Messages and emails, fill out a Google Form, and are reviewed and then copied into another spreadsheet.
+		</div>
+		<div class="col-6 mx-auto mt-2">
+			<b>2) Scoring candidates is a binary decision</b> <br>The proof of concept delivered "Strong," "Undecided," and "Weak" leads and the user scored them as "Good," "Okay," or "Bad" fits. However, in practice, an "Okay" candidate is passed over, due the volume of leads.
+		</div>
+		<div class="col-6 mx-auto mt-2 mb-3">
+			<b>3) Main decision factors are engagement & follower metrics and content quality</b> <br>While the inbound lead form involves many free text questions, these answeres are the last feature reviewed; other metrics are the main factors used to evaluate leads.
+		</div>
+
+		<div class="col-9 mx-auto">
+			I then laid out features according to the view they would exist in to prioritize and organize my workflow.
+		</div>
+
+		<img src="img/tl/a/views.png" class="col-11 p-0 mb-5 mt-3 shadow">
+
+		<h3>Iterations</h3>
+		<div class="col-9 mx-auto mb-4">
+			I explored presenting candidates in different ways and with different types of information, such as Instagram bios and account age. Due to scraper limitations and best data practices, we decided to only display the main three metrics: Followers, Engagement Rate, and Post Cadence.
+		</div>
+		<img src="img/tl/a/cards.png" class="col-11 p-0 mb-2 mt-3 shadow">
+		<div class="subtitle mb-4 mt-3">Card and table iterations</div>		
+
+		<div class="row mb-2">
+			<div class="col shadow mx-2"><img src="img/tl/a/screen1.png"></div>
+			<div class="col shadow mx-2"><img src="img/tl/a/screen2.png"></div>
+			<div class="col shadow mx-2"><img src="img/tl/a/screen3.png"></div>
+		</div>
+		<div class="subtitle mb-4 mt-3">Layout iterations</div>
+
+		<img src="img/tl/a/cards2.png" class="col-8 shadow p-0 mb-3">
+		<div class="subtitle mt-3">Color and scoring iterations</div>
+
+		<h3>Building</h3>
+		<div class="col-9 mx-auto mb-4">
+			I switched to working in HTML/CSS to get a better sense of code limitations as I designed and to accomodate a two week release cycle. Because time constraints forced us to reuse existing code, the first release (below) only allowed the user to see two cards at a time, similar to proof of concept version. 
+		</div>
+
+		<img src="img/tl/a/1lead.png" class="col-8 p-0">
+		<div class="col-9 mx-auto mb-4">
+			Later versions added the ability to sort and filter leads, infinite scroll to view more leads at once, and some usability tweaks.
+		</div>
+
+		<img src="img/tl/a/2lead.png" class="col-8 p-0">
+		<div class="col-9 mx-auto mb-4">
+			We would occasionally check user activity to ensure the scoring engine was accurate and noticed the client was only evaluating strong leads and none of the undecided leads. Undecided leads are still qualified but may have a slightly lower probability (85% or lower) of being a good fit. We switched to a gradient with twelve steps (below) to encourage more nuanced evaluation. 
+		</div>
+		<img src="img/tl/a/gradient.png" class="shadow col-11">
+
+		<div class="col-9 mx-auto mb-4 mt-5">
+			I also adjusted the visual language to better fit the client's existing brand. Below are the final screens. 
+		</div>
+
+		<img src="img/tl/a/3lead.png" class="col-8 p-0">
+		<div class="subtitle mb-4">Main unscored view</div>
+
+		<img src="img/tl/a/modal.png" class="col-8 p-0">
+		<div class="subtitle mb-4">Expanded modal with inbound application responses</div>
+
+		<img src="img/tl/a/reviewed.png" class="col-8 p-0">
+		<div class="subtitle mb-4">Scored leads</div>
+
+		<img src="img/tl/a/export.png" class="col-8 p-0">
+		<div class="subtitle mb-4">Exporting scored leads</div>
+
+		<!-- 	
+		UI builds (sketch files, all the versions)
+
+		Constraints/limitations
+		Resource/time
+		Delivering fairly stable releases on a 2 week cycle
+		I’m the developer lol
+		data privacy
+
+		Started off focusing on sketch files and the coding, switched to mostly code to handle production cycle, eventually shift to bootstrap for extensibility and responsiveness
+
+		**ML nonsense about probability
+		**choosing the right tools during the right stage -->
+
+
+		<a href="" onclick="goBack()"> &#60; back </a>			
+	
+	<script>
+				function goBack() {
+    			window.history.back();
+				}
+			</script>
+</body>
+
+</html>
+
+

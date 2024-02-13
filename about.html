@@ -1,56 +1,45 @@
-<!DOCTYPE html>
-<html>
 
 <head>
-	<meta charset="UTF-8">
-	<meta name="keywords" content="rachel, chang, design, communication, designer, user, interface, experience, cmu, carnegie, mellon, graphic">
-	
-	<link rel="stylesheet" href="css/reset.css"/>
-	<link rel="stylesheet" href="css/main.css">
-	<link rel="stylesheet" href="css/test.css">
+	<link rel="stylesheet" href="reset.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@200;300&family=Karla:wght@300;400&display=swap" rel="stylesheet">
 
-	<script src="js/jquery.js"></script>
-	<script src="js/scrobbler.js"></script>
-	
-	<title>about</title>
-	<meta id="meta" name="viewport" content="width=device-width; initial-scale=1.0" />	
-
+<!-- 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="bootstrap-grid.css">
+	<link rel="stylesheet" href="style.css">
+	<title>About</title>
 </head>
 
+<header></header>
+
 <body>
-	<nav>
-	<ul>
-		<li><a href = "index.html"> Rachel Chang</a></li>
-	</ul>
-	<ul class = "second">
-		<li><a href = "about.html" class="menuitem" id="space">About</a></li>
-		<li><a href = "img/resume.pdf" target="_blank" class="menuitem">Resume</a></li>
-		<li><a href = "mailto:rchlchang@gmail.com" class="menuitem">Contact</a></li>
-	</ul>
-	</nav>
 
-	<div class="content">
-<!-- 		<img src="img/index/face.jpg"> -->
-		<p>I'm a user experience and product designer currently based in Pittsburgh, working on delivering data science products at Tulco Labs. Previously, I studied communication design and human computer interaction at Carnegie Mellon. </p>
+	<div class="menu">
+		<div class="menuLink"><a href="index.html">Rachel Chang</a></div>
+		<div><a href="about.html" style="padding:1rem">About</a>
+		<a href="mailto:rchlchang@gmail.com">Contact</a></div>
+	</div>
 
-		<p>I'm interested in exploring how value is defined, quantified, and understood. Design is the artifact that dictates and is dictated by value systems that individuals directly interact with. </p>
+	<div class="row g-0">
+		<div class="col col-md-5 leftLine" style="border:none; font-size">
+			<div class="line" id="content">
+			
+					<p>I'm a UX and product designer based in the Bay Area.</p>
+
+					<p>I'm interested in exploring how value is defined, quantified, and understood.</p>
+			
+
+					<!-- <p>I'm interested in exploring how value is defined, quantified, and understood. Design is the artifact that dictates and is dictated by value systems that individuals directly interact with. </p>
  		
-		<p>If I'm not designing, I'm probably hitting the heavy bag, thinking about dogs, or cleaning up a failed kitchen experiment<!-- , or listening to <h3>test</h3> -->. <a href = "mailto:rchlchang@gmail.com">Talk</a> to me about my work or about the time I got a boat stuck in a tree.</p><br><br>
+					<p>If I'm not designing, I'm probably hitting the heavy bag or cleaning up a failed kitchen experiment. <a href = "mailto:rchlchang@gmail.com">Talk</a> to me about my work or about the time I got a boat stuck in a tree.</p> -->
 
-		<!-- I'm also interested in technology and its relationship with social systems. I'm also researching and writing about decolonizing design. I value recognizing and acknowledging the social implications and potential of design, figuring out what it means to design, and finding new spaces where design can intervene. -->
-  
-		<a href="" onclick="goBack()"> &#60;&#60; back </a>
+					<p><a href="img/rchang.pdf" target="_blank" rel="noopener noreferrer" style="text-decoration:underline">Resume</a></p>
+			</div>
 		</div>
-	</div>
 
-			<script>
-				function goBack() {
-    			window.history.back();
-				}
-			</script>
+		<div class="col-md-3 d-none leftLine"></div>
+		<div class="col-md-3 d-none leftLine"></div>
 	</div>
-
 
 </body>
 
-</html>

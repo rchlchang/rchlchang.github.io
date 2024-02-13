@@ -1,0 +1,86 @@
+body{
+	font-size: 16px; 
+	line-height: 1.25rem;
+	font-family: 'Helvetica', sans-serif;
+	background-color: #F2F2F2;
+	font-weight: 300;
+	height: 100%;
+	overflow: hidden;
+}
+
+.menu{ 
+	display: flex; 
+	justify-content: space-between;
+	padding: 1.2em 1.5rem 3rem 1.5rem;
+	position: sticky;
+	top: 0;
+}
+
+.menu a{text-decoration: none; color: black}
+.menu a:hover{text-decoration: underline;}
+/* a:hover{font-family: 'Fraunces', sans-serif;} */
+
+.row{display: flex; flex-direction: row; height: 100%;}
+
+.col-md-3{width: 20%; font-size: 0.875rem; line-height:1.1rem}
+
+.leftLine{
+	border-left: .1rem solid black;
+	display: flex;
+	flex-direction: column;
+	height: 100%;
+}
+
+.sectionLink{color: black; text-decoration: none;}
+.sectionLink:hover{text-decoration: underline;}
+
+.line{
+	border-top: .1rem solid black;
+	padding: .6rem 0 1.25rem 0;
+	margin: 0 1.5rem;
+}
+.job a{display: flex; gap: 1.75rem; text-decoration: none; color: black;}
+
+.role{color: #656565; margin-top:.25rem}
+.date{flex-basis: 20%}
+.jobTitle{flex-basis:80%;}
+.projectTitle{flex-basis:100% ;}
+
+
+.team{color: #656565; font-size: 0.875rem;}
+h1, h2 {margin-bottom:1.2rem; font-weight: 400; }
+#content{padding-bottom: 5rem; overflow-y:auto}
+#content p{margin-bottom: 1rem}
+#content .line{padding: .8rem 0 1.25rem 0; margin: 0 1.5rem;}
+#content a{color: black;}
+
+h3{font-weight: 400;}
+
+b{font-weight: 400;}
+
+ul{padding-left: 2rem;}
+li{list-style: disc outside; padding-bottom: .25rem;}
+.secondary{margin-left: 2.5rem; list-style-type: circle;}
+
+.imgRow{height: fit-content;}
+
+img{width:100%}
+
+iframe{
+    width: 100%;
+    aspect-ratio: 16/9;
+}
+
+.back{
+	border: none; 
+	padding: 0;
+	font-size:.75rem;	
+}
+
+.back a:hover{ text-decoration: underline; }
+.back a{text-decoration: none;}
+
+.quote{
+	color: #656565;
+	font-style: italic;
+}

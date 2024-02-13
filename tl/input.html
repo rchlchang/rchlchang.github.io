@@ -1,0 +1,143 @@
+
+<head>
+	<link rel="stylesheet" href="../reset.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@200;300&family=Karla:wght@300;400&display=swap" rel="stylesheet">
+
+<!-- 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="../bootstrap-grid.css">
+	<link rel="stylesheet" href="../style.css">
+	<title>Tulco Labs: Data Entry Refactor</title>
+	<meta id="meta" name="viewport" content="e-ial-scale=1.0">
+</head>
+
+
+<body>
+	<div class="menu">
+		<div class="menuLink"><a href="../index.html">Rachel Chang</a></div>
+		<div><a href="../about.html" style="padding:1rem">About</a>
+		<a href="mailto:rchlchang@gmail.com">Contact</a></div>
+	</div>
+
+	<div class="row g-0"> 
+		<div class="col-md-3 d-none d-md-block leftLine job" style="border:none">
+			<div class="line job sectionLink"><a href="../charge/charge.html">
+				<div class="date"><p>'20 - </p></div>
+				<div class="jobTitle">
+					<p>Chargepoint</p>
+					<p class="role">Senior User Experience Designer</p>
+				</div>
+			</div></a>
+
+			<div class="line job sectionLink"><a href="../tl/tl.html">
+				<div class="date"><p>'17 - '20</p></div>
+				<div class="jobTitle">
+					<p>Tulco Labs</p>
+					<p class="role">User Experience Designer</p>
+				</div>
+			</div></a>
+
+			<div class="line job sectionLink"><a href="../cmu/cmu.html">
+				<div class="date"><p>'13 - '17</p></div>
+				<div class="jobTitle">
+					<p>Carnegie Mellon University</p>
+					<p class="role">BFA in Communication Design, Minor in Human Computer Interaction</p>
+				</div>
+			</div></a>
+		</div>
+
+		<div class="col-md-3 d-none d-md-block leftLine job">
+			<div class="line sectionLink"><a href="ambassador.html">
+				<div class="projectTitle">
+					<p>Ambassador Prospecting</p>
+					<p class="role">Automating manual processes</p>
+				</div>
+			</div></a>
+
+			<div class="line sectionLink"><a href="input.html">
+				<div class="projectTitle">
+					<p>Data Entry Tool Refactor</p>
+					<p class="role">Improving client efficiency</p>
+				</div>
+			</div></a>
+		</div>
+
+		<div class="col leftLine" id="content">
+			<div class="line d-md-none d-block" style="border: none; padding: 0"><p style="font-size:.75rem"><a href="../tl/tl.html">↶ Back</a></p></div>
+			
+			<div class="line">
+				<h1>Data Entry Tool Refactor</h1>
+				<p class="team">Team: Project Manager, Full Stack Engineer (Client)</p>
+				<p>I was tasked with <b>reducing time spent on data entry</b> for the sales team of a waste management company. The interface redesign resulted in an <b>80% decrease in data entry time.</b></p>
+				<img src="../img/tl/rrfinal.png" alt="Software interface for digitizing invoices" class="pb-4">
+			</div>
+
+			<div class="line">
+				<h2>Problem Scope</h2>
+				<p>The client needed to increase the volume of calls their sales staff were making. <b>Data entry, while part of the sales process, was taking time away from calling.</b> Managers were being pulled away from primary responsibilities to evaluate data accuracy. My team, initially comprised of an engineer and engagement manager, was tasked with simplifying the process of entering invoicing bills into their internal software. They began to investigate the possibility of automating the process using optical character recognition (OCR) and I was asked to create the validation interface. </p>
+			</div>
+
+			<div class="line">
+				<h2>Research</h2>
+				<p> I started reviewing internal training documents and research previously conducted by my team. However, our research was based on a demo of the data entry software presented by the head of operations. He was an expert user and did not represent the typical sales staff member.</p>
+
+				<p>To understand why data entry was difficult and time consuming, I <b>conducted observational sessions and ride alongs with the inside sales, outside sales, and finance teams</b>, as well as unstructured interviews with sales and operations leadership. These teams regularly used or collected data for data entry. The service blueprint below outlines the entire sales journey and allowed us to indentify and discuss inefficiencies throughout the entire sales process.</p>
+
+				<img src="../img/tl/blueprint.png" alt="Journey map of sales process" class="pb-4">
+
+				<p>Spending time with the end users enabled me to observe actual, and sometimes unexpected, behavior. I noticed top sales staff had their desks covered with papers. <b>They would sometimes “preprocess” bills</b>; before entering a bill into the system, they would annotate a paper copy because the order of items on the bills didn’t match the workflow dictated by the software. A <b>UI refactor could solve this disconnect, improve data accuracy, task completion times, and perceived task difficulty</b>, and be implemented faster than an OCR solution. I then audited the software to identify inconsistent language, component usage, and interaction patterns. I also built modified keystroke level models to quantify inefficiencies and recurring patterns of use. </p>
+
+				<div class="row imgRow">
+					<div class="col-12 col-md pb-2"><img src="../img/tl/obs.png" alt="Photo of salesperson's computer monitor"></div>
+					<div class="col-6 col-md pb-2"><img src="../img/tl/klm.png" alt="Screenshot of a spreadsheet with keystroke level model data"></div>
+					<div class="col-6 col-md pb-2"><img src="../img/tl/audit.png" alt="Screenshot of software with audit notes"></div>
+				</div>
+			</div>
+
+			<div class="line">
+				<h2>Exploration</h2>
+				<p>After getting client buy in, I wireframed some potential redesigns. I clustered similar actions to the top of the page, reducing scrolling and <b>eliminating an implied chronology</b> to better reflect the bills being entered. </p>
+				<img src="../img/tl/early.png" alt="Wireframe explorations of software interface" class="pb-4">
+
+				<p>I kept changes minimal to allow for rapid implementation. With direction by the client's engineering team, I used Ant Design components to build out a usage guide based on their needs, ensuring a consistent design language. </p> 
+
+				<div class="row align-items-center imgRow">
+					<div class="col-12 col-md pb-2"><img src="../img/tl/originalrr.png" alt="Screenshot of the client's original software"></div>
+					<div class="col-12 col-md pb-2"><img src="../img/tl/it1.png" alt="Photo of salesperson's computer monitor"></div>
+				</div>
+
+				<p>The process for adding line items was adjusted to allow users to add multiple items of the same category, instead of adding each charge one by one.</p>
+
+				<iframe title="Iteration 1 Prototype" src="https://player.vimeo.com/video/330710208?h=02d1439c79" frameborder="0" class="mb-4" allowFullScreen></iframe>
+				<!-- <div class="subtitle mt-3 mb-3">Iteration 1 Prototype</div> -->
+
+				<p>I tested the rearranged buttons and simplified adding process by having sales staff of different experience levels enter a mock bill through a clickable prototype. <b>Users reported improved perceived task difficulty.</b></p>
+			</div>
+
+			<div class="line">
+				<h2>Resolution</h2>
+				<p>After seeing the prototype and early test results, the client wanted a more drastic redesign. For the second round, I was focused on limiting interactions to a single page (no page redirects) to create <b>a more streamlined experience</b>. I moved away from tables and displayed line items as “cards” rather than tables to <b>improve legibility and reduce extraneous information</b>. Key metrics were added to the top of the page to allow managers to quickly check input accuracy and identify where errors lie.</p>
+				
+				<iframe title="Final Prototype" src="https://player.vimeo.com/video/330764794?h=b888ad5608" frameborder="0" class="mb-4" allowFullScreen></iframe>
+				<!-- <div class="subtitle mt-3">Final Prototype</div>  -->
+
+				<p>I delivered a component guide and videos detailing interactions and continued working with their front end developer to ensure a smooth delivery. </p>
+				<div class="row imgRow">
+					<div class="col"><img src="../img/tl/doc1.png"></div>
+					<div class="col pb-2"><img src="../img/tl/doc2.png"></div>
+					<div class="col-12 mb-2"><img src="../img/tl/doc3.png"></div>
+				</div>
+				<p>The entire process, including deployment, took about six months. According to client feedback, the redesigned interface <b>decreased data entry time by 80%</b>.</p>
+			</div>
+
+			<div class="line">
+				<h2>Considerations</h2>
+				<p>Spending time with users in their space ensured the project’s success. Glancing over the software the first time, it was obvious there were some basic UI best practices that could improve the experience, but really spending time with users was what highlighted the core problems.</p>
+
+				<p>I would have loved to conduct more quantitative testing to compare task completion time, as well as seeing how the tool could be improved for the operations team. An OCR solution is still compelling and would be interesting to design, but the amount of work it would require from a technological standpoint made it unrealistic. </p>
+			</div>
+		</div>
+	</div>
+
+</body>
+

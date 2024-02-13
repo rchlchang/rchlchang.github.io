@@ -1,0 +1,106 @@
+/* @import url(https://fonts.googleapis.com/css?family=Inconsolata:400,700|Open+Sans); */
+@import url(https://fonts.googleapis.com/css?family=Merriweather:400,700,900);
+@import url(https://fonts.googleapis.com/css?family=Karla:400,700|Work+Sans|Heebo:700,800,900|Noto+Sans:900);
+
+
+html, body {
+	font-size: 22px;	
+	line-height: 30px;
+	font-family: 'Karla', sans-serif;
+	color: #353535;
+/* 	background: rgb(249,249,249); */
+    /* background: -webkit-linear-gradient(white, yellow); background: -o-linear-gradient(white, yellow); background: -moz-linear-gradient(white, yellow); background: linear-gradient(white, yellow);  */
+    background-attachment: fixed;
+    background-size: contain;
+    margin: 1rem 2rem;
+    overflow-x: hidden;
+    z-index: -1;
+}
+
+/* violet , magenta, lavenderblush , yellow, salmon */
+
+nav{
+/* 	font-weight: 700; */
+	top: 0;
+	max-width: 90%;
+	/*font-size: 1.3rem;*/
+	font-weight: bold;
+}
+
+.second{
+	right: 2rem;
+}
+
+nav ul{
+	list-style-type: none;
+	position: fixed;
+	z-index: 20;
+	font-size: .8rem;
+}
+
+nav ul li{
+	display: inline;
+}
+
+
+nav ul li a:hover{
+	background-color: yellow;
+}
+
+.menuitem{
+	margin-right: 2vw;
+}
+
+/* .selection{
+	background-image: url("../img/index/stasis.png");
+	width: 70vw;
+	height: 25vw;
+	margin: 0 0 3vh 0;
+	border: 3px solid black;
+} */
+
+.selection p{
+	margin-left: 69vw;
+	margin-top: 22%;
+	font-size: 4rem;
+}
+
+/* .selection a:visited, a:link, a:active{
+	text-decoration: none;
+} */
+
+p{
+	margin-bottom: 1rem;
+}
+
+.menuItem{
+	box-shadow: 6px 6px 19px -4px rgba(0,0,0,0.41);
+/* 	width: 20%; */
+	display: inline;
+margin: 0 1.3rem 1.3rem 0;
+}
+
+.menuItem:hover{
+	box-shadow: 6px 6px 19px -4px rgba(0,0,255,0.7);
+/* 	width: 21%; */
+}
+
+.indexItem{
+	display: inline-block;
+}
+
+a{
+	color: black;
+}
+
+h2{
+	font-weight: bold;
+}
+
+title br{
+	font-style: italic;
+}
+
+
+
+

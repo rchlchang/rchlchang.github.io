@@ -76,7 +76,7 @@
 			<div class="line">
 				<h1>Mobile App Redesign</h1>
 				<p class="team">Team: Product Manager, Engineering Manager, Mobile Developers, QA Engineers, UX Researcher</p>
-				<p>I redesigned ChargePoint's consumer mobile app with three goals in mind: <b>streamlining mobile components, meeting WCAG accessibility standards, and improving usability</b>.</p>
+				<p>I redesigned ChargePoint's consumer mobile app with three goals in mind: <b>streamlining mobile components, improving usability, and meeting WCAG accessibility standards</b>.</p>
 
 				<div class="row imgRow justify-content-center mb-4">
 					<div class="col-4"><img src="../img/charge/app/mapFin.png" alt="Screenshot of the station map"></div>
@@ -86,14 +86,43 @@
 
 			<div class="line">
 				<h2>Problem Scope</h2>
-				<p>The app had not seen a major design update since 2015. The app experience was inconsistent, with some sections still using an older visual design. Developers were rewriting components and pages with each feature update, despite versions of them already existing somewhere in the app.</p>
+				<p>The app had not seen a major design update since 2015. The app experience was inconsistent, with some sections styled with an older visual design. <b>Developers were rewriting components and pages with each feature update</b>, despite versions of them already existing somewhere in the app.</p>
 
-				<p>Looking over with recently completed <a href="find.html">user research</a> and usage data, I knew we needed to change the app to better serve actual driver needs. Improving accessibility was also a major company-wide goal.</p>
+				<p>The app had a structure and layout that was <b>not aligned with <a href="find.html">user research</a> nor usage data</b>. The entire EV charging industry and EV drivers had changed and the app was not reflective of that. It needed to be redesigned to better serve actual driver needs.</p>
+
+				<p>Improving accessibility and meeting WCAG standards was also a major company-wide goal. Our app had <b>never been designed with accessibility in mind</b>; the color palette had major contrast issues and many interaction patterns were challenging for both disabled and able bodied drivers.</p>
 			</div>
 
 			<div class="line">
 				<h2>Research</h2>
-					<div class="row imgRow justify-content-center mb-3">
+
+					<p>I had recently completed a <a href="find.html">diary and qualitative interview study</a> with drivers from the EU and US to better understand how drivers charge, look for charging stations, and compare stations.  I observed drivers demonstrating how they typically find charging stations and completing brief tasks on the Chargepoint app. Some were every day users for our app, other drivers rarely used it. </p>
+
+					<p>I also reviewed usage data from Mixpanel and reviews from the App Store for more data points, building a more complete picture of driver behavior and pain points.</p>
+
+					<div class="row imgRow align-self-center">
+						<div class="col-md col-sm-12 mb-2"><img src="../img/charge/app/useData.png" alt="Graph of most clicked on parts of the app"></div>
+						<div class="col-md col-sm-12 mb-2"><img src="../img/charge/app/diary.png" alt="Screenshot of video from driver showing their daily charger"></div>
+					</div>
+
+					<p> I summarized the research findings into principles, in no particular order, to guide the redesign:
+
+					<ul>
+						<li><b>Drivers tend to visit the same chargers</b></li>
+						Drivers charge at the same few chargers for a variety of reasons. Some stick to routine and visit the same few places; for others, they know which chargers works for them and their car. Because drivers are sensitive to EV range limits, they do not frequently find themselves in an unfamiliar area needing a charger.
+
+						<li class="pt-2"><b>Search is not the main priority for all drivers</b></li>
+						Because drivers tend to frequent the same stations, drivers are not necessarily frequently searching for stations on our app. Drivers with company vehicles, common in the EU, will have more administrative tasks to complete, such as submitting charging history for reimbursement on a monthly basis. Home charger owners tend to use the app to set charging schedules and manage charger settings.
+
+						<li class="pt-2"><b>Drivers are not familiar with charging terminology</b></li>
+						There is a lot of jargon associated with EV charging. Stations can be referred to as Level 1, 2, and 3. NACS, J1772, Combo, CCS, and Type 2 are some common connectors. Charging is sometimes described in kilowatt hours, sometimes kilowatts. Dealership and car rental employees aren’t trained to educate drivers and sometimes even experienced drivers can have difficulty understanding EV terminology.
+
+						<li class="pt-2"><b>Drivers will try to minimize risk when selecting a station.</b></li>
+						All drivers I spoke were able to recall a time they drove to a charger and could not charge because the station was broken or incompatible with their vehicle. This is especially frustrating because of range limitations and the time intensive nature of charging. Down stations need to be labelled accurately and station compatibility should be simple to understand. Drivers frequently prefer areas with more chargers, in case one is broken.
+					</ul>
+
+
+					<!-- <div class="row imgRow justify-content-center mb-3">
 						<div class="col col-md-4"><img src="../img/charge/app/map5.jpg" alt="Screenshot of old map view"></div>
 						<div class="col col-md-4"><img src="../img/charge/app/oldList.png" alt="Screenshot of old station list view"></div>
 					</div>
@@ -101,61 +130,60 @@
 					<p>The mobile app's primary function is to help drivers find, use, and pay for charging stations. When the app is first opened, a preview of the closest station's information is shown. Other functions are hidden behind a hamburger menu in the upper left hand corner.</p>
 					<p>The app's color scheme presents color contrast accessibility issues. Native accessibility features do not work on our app, as components are custom built.</p>
 
-					<div class="row imgRow justify-content-center">
-						<div class="col-md-8 col mb-2"><img src="../img/charge/app/useData.png" alt="Graph of most clicked on parts of the app"></div>
-					</div>
+					
 
 					<p> A few things in our Mixpanel data caught my attetion:
 					<ul>
 						<li>"List View" (E) is frequently selected, despite being hidden behind an overflow menu. </li>
 						<li class="secondary">In research sessions, drivers used list view to quickly compare stations in an area; paid or free, AC or DC.</li>
-					<!-- <li>"Recently Visited" & "My Spots" has decent traction for being behind a menu</li> -->
 						<li>"Search" (G) is fairly low on the list.</li>
 						<li class="secondary">"Filters" (B) activity suggests drivers are looking for stations but using a combination of location services and filters to narrow down stations.</li>
 						<li class="secondary">"Account" (A) and "Charging Activity" (C) being high on the list indicate station search may not be the primary reason drivers use the app.</li>
 						<li>"Station Details" (I) is not frequently selected. Driver information needs may be met by the station preview.</li>
-					</ul></p>
-
-					<p>I also wanted to base the redesign on my <a href="find.html">driver research study</a>:
-						<ul>
-							<li>Deciding to charge and selecting a station is a complex series of decision making. As a colleague put it: "Search and find is about answering the right questions at the right place at the right time."</li> 
-							<li>Drivers know just enough information to charge but can be confused by new terminology.</li>
-							<li>Especially when using stations new to them, drivers worry about encountering a station they cannot use.</li>
-						</ul>
-				</p>
+					</ul></p> -->
 			</div>
 
 			<div class="line">
-				<h2>Exploration</h2>
-				<h3>Landing Page</h3>
+				<h2>Explorations</h2>
+				<h3 class="mb-1">Usability</h3>
+				<h4>Landing Page</h4>
 				<div class="row justify-content-center imgRow mb-3 mt-3">
 					<div class="col col-md-4"><img src="../img/charge/app/landingGen.png" alt="Proposed landing page for general drivers"></div>
 					<div class="col col-md-4"><img src="../img/charge/app/landingHome.png" alt="Proposed landing page for home charger owners"></div>
 				</div>
-				<p>User data seemed to suggest that finding stations wasn't the main reason drivers were coming to the app. I proposed a <b>landing page to provide more options for drivers</b>: search for a station, check vehicle charging status, or manage their home charger. Driver education and onboarding content could also be featured. Drivers could be <b>segmented and shown different types of content</b>. Unfortunately, the idea was dropped due to engineering resourcing and deadlines.</p>
+				
+				<p>I proposed showing a personalized landing page, instead of a generic map, upon open. User data suggested finding stations wasn't the main reason drivers were coming to the app. Drivers would be <b>segmented and have different views</b> based on their profile: new EV drivers, home charger owners, workplace chargers to name a few. Drivers would be shown content and features that actually fit there needs. Home charger owners will be more interested in setting their charging schedule than looking for a station. A driver renting an EV for the first time will need more help with learning how to charge. </p>
 
-				<p>The team settled on implementing a navigation bar on the bottom of the screen to improve feature discoverability and accessibility. </p>
+				<!-- <p>The team settled on implementing a navigation bar on the bottom of the screen to improve feature discoverability and accessibility. </p> -->
 
-				<h3>Map</h3>
+				<h4>My Spots and Recents</h4>
 				<div class="row justify-content-center imgRow mb-3 mt-3">
 					<div class="col"><img src="../img/charge/app/map5.jpg" alt="Original map view"></div>
-					<div class="col-10"><img src="../img/charge/app/map1.png" alt="Map view iterations"></div>
-				</div>
-				<p>I wanted to <b>integrate the map and list view</b>. The map view is useful for understanding a station's geographic location and context (e.g. nearby amenities), while list view allows for feature comparison (e.g. charger speed) between stations. I added quick filters for faster filter access and improve the visibility of filters in use.  Favorites and recents was moved out of the hamburger menu and added to the map view, where it would be more in context. I intially added favorites and recents as additional tabs, but moved them to the filter bar to avoid an awkward and unnecessary interaction with filters. Search was also moved to the bottom sheet to keep interactions focused in one area.</p>
-				<!-- <div class="row justify-content-center imgRow mb-3 mt-3">
-					<div class="col col-md-10"><img src="../img/charge/app/cardIt.png" alt="Station card iterations"></div>
-				</div>
-				<p>station card, layout</p> <p style="color:red">MORE TEXT HERE</p> -->
-
-				<h3>Charging View</h3>
-				<div class="row justify-content-center imgRow mb-3 mt-3">
-					<div class="col"><img src="../img/charge/app/chargingOld.png" alt="Original charging view"></div>	
-					<div class="col-10"><img src="../img/charge/app/charging.png" alt="Vehicle charging view iterations"></div>					
+					<div class="col-9"><img src="../img/charge/app/recents.png" alt="My Spots and Recents iterations"></div>
 				</div>
 
-				<p>I needed to <b>balance showing a lot of data and legibility</b> in the vehicle charging view. Depending on the situation, drivers will use different data to determine when charging is complete. Some drivers may look at price, others may use battery percentage or killowatt hours. Technical ability and jargon familiarity also affects drivers's data needs.</p>				
+				
+				<p>My Spots and Recents had higher than expected traffic for being pages buried behind a hamburger menu. Drivers also tend to revisit the same stations, so I wanted to move those two pages out of the hamburger menu and integrate it into the map view. I explored a few treatments, such as tabs, a floating action button, or filter attributes.</p>			
 
-				<h3>Station Details</h3>
+				<h3>Reusable Components</h3>
+					<div class="row justify-content-center imgRow mb-3 mt-3">
+						<div class="col-9"><img src="../img/charge/app/cards.png" alt="Iterations of various card types"></div>
+					</div>
+				<p>Where possible, I reused and streamlined components. For example, tappable cards were used throughout the app for various applications, representing stations, connection offers, and saved locations.  I wanted a generic enough design that could be easily modified to accommodate different attributes and information density. </p>
+
+				<h3>Accessibility</h3>
+				<div class="row imgRow justify-content-center mb-3 d-flex align-items-center">
+					<div class="col"><img src="../img/charge/app/oldStation.png" alt="Original station page"></div>
+					<div class="col-10"><img src="../img/charge/app/tab.png" alt="Iterations for tabbed navigation"></div>
+				</div>
+				<p>I wanted to introduce tab navigation throughout the app to better manage information density. Certain pages, such as the station details view, are rather long, which can already be annoying for able bodied users to parse through. For users that rely on screen readers, this can be even more irritating.</p>
+
+				<p>I explored using iconography, horizontal scroll, and vertical stacking to accommodate longer strings, localization, and expanded font sizes.</p>
+
+				
+					
+
+				<!-- <h3>Station Details</h3>
 				<div class="row justify-content-center imgRow mb-3 mt-3 d-flex align-items-center">
 					<div class="col"><img src="../img/charge/app/map5.jpg" alt="Original Map view"></div>
 					<div class="col-10"><img src="../img/charge/app/stationMin.png" alt="Early iteration of the map view"></div>
@@ -163,57 +191,72 @@
 
 				<p>I started with the minimized view, which appears when a driver selects a pin or station card. When drivers select a station, they may be trying to see more details to assess a station, start a charging session, or navigate to the station. Charger <b>compatibility is the most important factor when deciding on a station</b>, so connector type and charger speed are prominently featured above the fold.</p>
 				
-				<div class="row imgRow justify-content-center mb-3 d-flex align-items-center">
-					<div class="col"><img src="../img/charge/app/oldStation.png" alt="Original station page"></div>
-					<div class="col-10"><img src="../img/charge/app/tab.png" alt="Iterations for tabbed navigation"></div>
-				</div>
-
+				
 				<p><b>Information density was an area of concern</b> for the station details page: Charging ports and all the associated specifications, station hours, access control, popular hours, last charged vehicle, and user submitted tips are just some of the types of information displayed. I added tab navigation to organize and manage all the different information types, while taking into account localization string lengths and large text modifications.  </p>
 
 				<div class="row imgRow justify-content-center mb-3">
 					<div class="col"><img src="../img/charge/app/connector.png" alt="Iterations for connector selections"></div>
-				</div>
-				<p>To further complicate the charging process, after selecting a station, drivers need to unlock a connector. One station can have multiple connectors that charge at different speeds for different prices. To manage the complexity of connector level data, I added a <b>compatibility label</b> to simplify decision making for drivers and explored different visual treatments.</p>
+				</div> -->
 			</div>
 
 			<div class="line">
 				<h2>Resolution</h2>
-				<p>We shipped the first release of the redesigned app with new navigation, map view, and station details sheet.</p>
+				<p>I designed primarily using iOS components as Apple had reached out and offered a design review to help evaluate our component usage and accessibility. Focusing on iOS also helped reduce the amount of design development time. I held reviews with iOS and Android developers to ensure equivalent components existed within Material Design. If a component required excessive effort from the Android team, we would try to find a middle ground between the two systems.</p>
 
+				<p>I also focused on building for smaller screen sizes (iPhone SE) to ensure relevant and important information would be available above the fold. This was also done in part to support more accessibile development; using larger font sizes tends to stretch out content on the vertical axis so less content is visible without scrolling.</p>
+
+				<p>Our first release of the new 6.0 version included updated navigation, map view, charging details, and station details sheet.</p>
+
+				<h3>Usability</h3>
+				
+				<h4 class="mb-2">Integrated Map and List View</h4>
 				<div class="row imgRow justify-content-center mb-4">
-					<div class="col-5"><img src="../img/charge/app/mapFin.png" alt="Screenshot of the station map"></div>
-					<div class="col-5"><img src="../img/charge/app/expandedMapFin.png" alt="Screenshot of the expanded list"></div>
+					<div class="col-4"><img src="../img/charge/app/mapFin.png" alt="Screenshot of the station map"></div>
+					<div class="col-4"><img src="../img/charge/app/expandedMapFin.png" alt="Screenshot of the expanded list"></div>
+				</div>
+				<p>I <b>integrated the map and list view</b>, as the latter was a popular view that was behind an overflow menu. While the map view is useful for understanding a station’s geographic location relative to your own location or a point of interest, the <b>list view is better for quickly evaluating and comparing</b> different stations’s attributes, which are relevant to understanding station compatibility. Attributes that drivers care about, like speed and proximity, are visible from the list. Exposed filters also allow driver to find suitable stations faster. Main actions are clustered in the lower half of the screen for better accessibility. </p>
+
+				<h4>Map Key</h4>
+				<div class="row imgRow justify-content-center mb-4">
+					<div class="col-5"><img src="../img/charge/app/key.png" alt="Screenshot of the station map"></div>
+				</div>
+				<p>The map key educates drivers on the visual language of our pins, as different apps and localities often have different meanings for colors (e.g. many UK apps use color to denote station speed). This prevents drivers from making wrong assumptions about stations, as we saw in user studies. </p>
+
+				<h4 class="mb-2">Station Details</h4>
+				<div class="row imgRow justify-content-center mb-4">
+					<div class="col-4"><img src="../img/charge/app/stationFin.png" alt="Screenshot of station details half sheet"></div>
+					<div class="col-4"><img src="../img/charge/app/connectorFin.png" alt="Screenshot of connector options under station details"></div>
+					<div class="col-4"><img src="../img/charge/app/connectorDetailFin.png" alt="Screenshot of the expanded connector details"></div>
 				</div>
 
-				<h3>Bottom Tab Navigation</h3>
-				<p>Tab navigation improves feature discoverability and is better suited for native accessibility tools.</p>
+				<p>The new station half sheet features relevant station attributes and actions to get drivers to where they need to go faster. Speed is represented as lightening bolts and kilowatts to accomodate novice and advanced drivers. </p>
+
+				<p>A compatibility label reduces the mental load for drivers and ensures they will able to charge at the station. Stations with multiple connectors have side "A" and "B" labels, which correspond with the station's on screen graphics, ensuring a consistent experience across platforms. </p>
+
+				<h3>Accessibility</h3>
+
+				<h4 class="mb-2">Bottom Navigation</h4>
+				<div class="row imgRow justify-content-center mb-4">
+					<div class="col-10"><img src="../img/charge/app/navigation.png" alt="Examples of the navigation bar"></div>
+				</div>
+				<p>A bottom navigation bar replaced the hamburger menu, as it works with assisitve technologies and improves feature discoverability and accessibility. For example, exposing "Home" allows home charger owners to more easil access the features they need and introduce those without a home charger to more of our hardware ecosystem.  </p>
 				
-				<h3>Map</h3>
-				<p>List and map view are combined for faster and more efficient browsing. Drivers an easily compare stations to find the most suitable station. Attributes that drivers care about, like speed and proximity, are visible from the list. </p>
+				<h4 class="mb-2">Tab Navigation</h4>
+				<div class="row imgRow justify-content-center mb-4">
+					<div class="col-11"><img src="../img/charge/app/tabFin.png" alt="Exmaples of tab navigation in use"></div>
+				</div>
+				<p>The two tab navigation provides drivers quicker access to the information they need and works with longer strings from localization or expanded font sizes associated with native mobile accessibility features. </p>
 
-				<h3>Filters</h3>
-				<p>Quick filters feature popular categories.</p>
-
-				<div class="row imgRow justify-content-center mb-3">
-					<div class="col-6"><img src="../img/charge/app/mySpotsFin.png" alt="Screenshot of "Saved"></div>
+				<h4>Updated Color Palette</h4>
+				<div class="row justify-content-center imgRow mb-3 mt-3">
+					<div class="col-3"><img src="../img/charge/app/chargingOld.png" alt="Old charging view"></div>
+					<div class="col-3"><img src="../img/charge/app/sessionFin.png" alt="New charging view"></div>
+					<div class="col-3"><img src="../img/charge/app/connOld.png" alt="Old connections view"></div>
+					<div class="col-3"><img src="../img/charge/app/connNew.png" alt="New connections view"></div>					
 				</div>
 
-				<h3>Saved</h3>
-				<p>“My Spots” and “Recent” is combined into “Saved” and featured on the map for easier access, as drivers tend to charge at the same or familiar stations. </p>
-
-				<div class="row imgRow justify-content-center mb-3">
-					<div class="col-4"><img src="../img/charge/app/stationFin.png" alt="Screenshot of the minimized station details"></div>
-					<div class="col-4"><img src="../img/charge/app/connectorFin.png" alt="Screenshot of the charger section of station details"></div>
-					<div class="col-4"><img src="../img/charge/app/tipsFin.png" alt="Screenshot of the charger section of station details"></div>
-				</div>
-
-				<h3>Station Details</h3>
-				<p>Relevant info is featured above the fold. Speed is represented as lightening bolts and kilowatts to accomodate novice and advanced drivers. Compatibility labels make it easier for drivers to pick the right station and connector. Tab sections allow faster browsing and discoverability.</p>
+				<p>I applied a color palette, developed in collaboration with a visual designer, to ensure all components are accessible, moving away from the gray blue found in older versions of our app.</p>			
 				
-			
-				<!-- <div class="row imgRow justify-content-center">
-					<div class="col-10"><img src="../img/charge/app/cardTreatment.png" alt="Station card treatment and behavior for increased text size"></div>
-				</div> -->
 				<h3 class="mb-2">Interaction Demos</h3>
 
 				<iframe title="Final Prototype" src="https://player.vimeo.com/video/912088794?h=f637c98b7a" frameborder="0" class="mb-4" allowFullScreen></iframe>
@@ -223,35 +266,41 @@
 
 			<div class="line">
 				<h2>Future Considerations</h2>
-				<h3>Map Pins</h3>
+				<p>We had our first release in November 2023, after seven months of design and development. Our goals were to make progress on app accessibility and UX improvements for our drivers. As many parts of the app had to be rewritten, the entire app couldn’t be addressed with the first release. Resourcing constraints were another issue; backend and API developers were tied up in other projects, so some major changes had to be pushed further down the roadmap. </p>
+
+				<h3>Map Pins & Ontology</h3>
 				<div class="row imgRow justify-content-center mb-3 mt-2">
 					<div class="col"><img src="../img/charge/app/pins.png" alt="Iterations for pin treatment"></div>
 				</div>
-				<p>Stations are represented by pins, colors denote the station's status, and shape denotes AC or DC. In high station density areas, like a parking garage, stations are manually geotagged to prevent too much pin overlap on the map.</p>
-				<p>With the help of a design researcher, I tested different <b>pin treatments exposing different site and station attributes</b>. Each pin represents a site with one or more stations. While color still communicates station status, the number of available and unavailable stations is shown at this level, helping drivers select a site where they are most likely to get an available charger. We also tried showing charger speed, network, access control, and promotional offers on this map view. </p>
+				<p>In research sessions, we asked drivers what they thought the colors and shapes represented. While some attributes were fairly intuitive, others were unclear and drivers were left to make assumptions. Confusion around map pins was something that I would have liked to further work on. A pin key was an okay first step, but does not address the core issue.</p>
 
-				<h3>Station Ontology</h3>
-				<div class="row imgRow justify-content-center mb-3 mt-2">
+				<p>Additionally, pins frequently overlap on the map in high density locations, like urban downtowns or parking garages. Pins have to be manually geotagged to resolve the overlap. </p>
+
+				<p>With the help of a design researcher, we tested different pin treatments and exposing different station attributes. To resolve excessive overlap, we consolidated individual station pins into site pins. This also allows drivers to better gauge their chances of getting an available a station. We also tried showing charger speed, network, access control, and promotional offers on this map view.</p>
+
+				<p>On top of the overlap issue, switching from a station based map to a site based map allows for better data attribution. For example, amenities, access restrictions, and hours are better assigned at a site level than station level.</p>
+
+
+				<!-- <div class="row imgRow justify-content-center mb-3 mt-2">
 					<div class="col-7"><img src="../img/charge/app/site.png" alt="Screenshot of a site information page and a selected station"></div>
-				</div>
-				<p>The way stations are represented stands to be improved. On today's map, each pin represents a station. Drivers may prefer to think in terms of sites: a geographic region with one or more chargers. By focusing on sites, instead of chargers, drivers can <b>better assess how suitable an area is for their charging needs</b>: what amenities are nearby, how many compatible stations are there. While this information is present in today's app, it has to be inferred. Designing in terms of sites is closer to the process of fueling at a gas station that most drivers are familiar with. </p>
-
-				</p>While showing stations on a site basis requires more taps to get to charging, it streamlines the map and could help simplify the decision making process. </p>
-				
-
+				</div> -->	
 				<h3>Driver Education & Personalization</h3>
-				<p>Today, we have no way of segmenting drivers into persona groups except via blunt data points (e.g. a driver with 100+ charging sessions is probably a somewhat of an expert on EVs). Driver <b>education needs to be relevant</b> to the driver's needs and <b>delivered  the at the approriate time</b> for greatest efficacy.</p>
+				<div class="row imgRow justify-content-center mb-3 mt-4">
+					<div class="col-9"><img src="../img/charge/app/profile.png" alt="Potential influences on a driver profile"></div>
+				</div>			
+				
+				<p>Today, drivers are not meaningfully segmented into persona groups. We can extrapolate attributes from data we have today, such as number of charging sessions, “connection” offer participation, account type (work vs. personal), and home charger ownership. </p>
 
-				<p>Drivers could be encouraged to fill out a driver profile, which could include how familiar they are with EVs and their primary charging location (e.g. workplace, home, public stations). Having a clearer picture of a driver's context would enable us to surface relevant educational content and app features; the information needs of a first time driver renting an EV on vacation are going to differ from an veteran driver on their second EV that charges at their workplace.</p>
-
-				<p>Educational content could come in the form of a brief app walkthrough, charging tutorial videos, or blog posts.</p>
+				<p>Assigning driver personas to users would allow us to deliver a personalized and best in class experience to keep drivers in our ecosystem. Content and driver education needs to be relevant to the driver's needs and delivered the at the appropriate time for greatest efficacy. The needs of a first time driver renting an EV on vacation are going to differ from an veteran driver on their second EV that charges at their workplace.</p>
 
 
 				<h3>Further Visual Development</h3>
 				<div class="row imgRow justify-content-center mb-3 mt-2">
 					<div class="col"><img src="../img/charge/app/visual.png" alt="Alternate visual direction"></div>
 				</div>
-				<p>Using orange as the primary color in the palette is a bit unbalanced and garish, though it reinforces the brand. I also explored some blockier layouts to create more differentiation between the foreground and background to improve legibility.</p>				
+				<p>To meet the our deadlines, I limited my visual explorations. I would have liked to explore more applications of our brand palette, whether it be reducing our reliance on orange or introducing more blacks and grays to balance the brand palette more. 
+
+				Using orange as the primary color in the palette is a bit unbalanced and garish, though it reinforces the brand. I also explored some blockier layouts to create more differentiation between the foreground and background to improve legibility.</p>				
 				<!-- <p>workflow: While I had worked closely with the mobile development team previously, this was our biggest project to date together. (their mind: UI rework, my mind: redesign. I wish we had spent a little more time in the planning phase of outlining the timeline and expectations for work delivered. </p> -->
 			</div>
 

@@ -1,0 +1,178 @@
+
+<head>
+	<link rel="stylesheet" href="../reset.css">
+	<link rel="preconnect" href="https://fonts.gstatic.com">
+	<link href="https://fonts.googleapis.com/css2?family=Fraunces:wght@200;300&family=Karla:wght@300;400&display=swap" rel="stylesheet">
+	<meta name="viewport" content="width=device-width, initial-scale=1, minimum-scale=1"> 
+
+<!-- 	<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.0-beta2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-BmbxuPwQa2lc/FVzBcNJ7UAyJxM6wuqIj61tLrc4wSX0szH/Ev+nYRRuWlolflfl" crossorigin="anonymous"> -->
+	<link rel="stylesheet" href="../bootstrap-grid.css">
+	<link rel="stylesheet" href="../style.css">
+	<title>ChargePoint: Guardian</title>
+</head>
+
+<header></header>
+
+<body>
+	<div class="menu">
+		<div class="menuLink"><a href="../index.html">Rachel Chang</a></div>
+		<div><a href="../about.html" style="padding:1rem">About</a>
+		<a href="mailto:rchlchang@gmail.com">Contact</a></div>
+	</div>
+
+	<div class="row g-0"> 
+		<!-- got rid of col, menuCol, col2 -->
+		<div class="col-md-3 d-none d-md-block leftLine job" style="border:none">
+			
+			<div class="line job sectionLink"><a href="../charge/charge.html">
+				<div class="date"><p>'20 - '24</p></div>
+				<div class="jobTitle">
+					<p>Chargepoint</p>
+					<p class="role">Senior User Experience Designer</p>
+				</div>
+			</div></a>
+
+			<div class="line job sectionLink"><a href="../tl/tl.html">
+				<div class="date"><p>'17 - '20</p></div>
+				<div class="jobTitle">
+					<p>Tulco Labs</p>
+					<p class="role">User Experience Designer</p>
+				</div>
+			</div></a>
+
+			<div class="line job sectionLink"><a href="../cmu/cmu.html">
+				<div class="date"><p>'13 - '17</p></div>
+				<div class="jobTitle">
+					<p>Carnegie Mellon University</p>
+					<p class="role">BFA in Communication Design, Minor in Human Computer Interaction</p>
+				</div>
+			</div></a>
+		</div>
+
+		<div class="col-md-3 d-none d-md-block leftLine job">
+			<div class="line job sectionLink"><a href="find.html">
+				<div class="projectTitle">
+					<p>Find Journey Research</p>
+					<p class="role">Understanding and designing for drivers's mental models</p>
+				</div>
+			</div></a>
+
+			<div class="line job sectionLink"><a href="app.html">
+				<div class="projectTitle">
+					<p>Mobile App Redesign</p>
+					<p class="role">Overhauling to better serve drivers</p>
+				</div>
+			</div></a>
+
+			<!-- <div class="line job sectionLink"><a href="a11y.html">
+				<div class="projectTitle">
+					<p>Accessibility</p>
+					<p class="role"></p>
+				</div>
+			</div></a> -->
+
+			<div class="line job sectionLink"><a href="guard.html">
+				<div class="projectTitle">
+					<p>Guardian</p>
+					<p class="role">Centralizing communications and data to reduce customer churn</p>
+				</div>
+			</div></a>
+		</div>
+
+		<div class="col leftLine" id="content">
+			<div class="line d-md-none d-block back"><p><a href="../charge/charge.html">↶ Back</a></p></div>
+			<div class="line">
+				<h1>Guardian</h1>
+				<p class="team">Team: Product Managers, UX Researcher</p>
+				<p>I designed an order management tool that aimed to improve compliance, centralize data collection, and reduce customer confusion in order to reduce cycle time and customer dissatisfaction.</p>
+				<img src="../img/charge/guardian.png">
+			</div>
+
+			<div class="line">
+				<h2>Problem Scope</h2>
+				<p>ChargePoint shifted to selling stations via a distribution model to better capture geographies and markets, as direct sales require more time and interaction with customers. While sales volume increased, delays, low quality installs, and poor responsiveness caused ChargePoint to loose customers and renewals. </p>
+			</div>
+
+			<div class="line">
+				<h2>Findings</h2>
+
+				<figure class="figure mb-3">
+					<img src="../img/charge/gmap.png" class="figure-img img-fluid">
+					<figcaption class="figure-caption mt-1" alt="Journey map outlining pain points in the station purchase and install life cycle">C/O <a href="https://www.linkedin.com/in/jiloreta/">Joe Iloreta</a></figcaption>
+				</figure>
+
+				<p>Looking over the insights presented by my research colleague, it was clear most issues at insall and activation were due to missing or inaccurate data. ChargePoint staff were reaching out to customers to collect vital information, but emails were unread, lost in inboxes, or sometimes sent to the wrong point of contact.</p>
+				<p>Our solution needed to resolve three major issues:
+				<ul>
+						<li><b>Highly distributed communications</b></li>
+						With so many actors involved with the station lifecycle, no single team owns the process nor does anyone have a singular view. Customers receive calls and emails from multiple contacts from ChargePoint, the installer, contractors, and station suppliers, and vice versa. Communications are not centralized anywhere and critical points of decision-making frequently fall through the cracks. 
+
+						<li class="pt-2"><b>Opaque station lifecycle processes</b></li>
+						Throughout the station lifecycle are key tasks and events. For example, if certain information about a site is missing, activations cannot proceed with getting stations live. Actors, which may be the install team or the end customer, are often unaware of their critical role and critical actions. They often do not know who or where to escalate issues to and support struggles to reach the right contacts. A contact provided at the point of sale may not be a relevant contact when a station install is done several years later. 
+
+						<li class="pt-2"><b>Labor intensive and brittle data capture</b></li>
+						Research cataloged over 100 mandatory data fields throughout the sales, install, and activation process. These data fields are captured and transferred across multiple channels, including email, PDF, phone, web form, and Excel. Sales partners may have there own methods for collecting and transferring data, further complicating the data capture process. Such manual data collection processes are prone to error, leading to downstream delays and issues. 
+					</ul></p>
+
+				
+			</div>
+
+			<div class="line">
+				<h2>Explorations</h2>
+				<figure class="figure mb-3">
+					<img src="../img/charge/git.png" class="figure-img img-fluid" alt="Early iteractions of the sales management software">
+					<figcaption class="figure-caption mt-1">Early iterations</a></figcaption>
+				</figure>
+
+				<p>With the project manafers, we determined that an order tracking system that allowed sales and support to see order information and track data, with a view for customers as well, could potentially reduce challenges in collecting and transferring data and improve customer satisfaction. I engaged in a co-design process with the team to understand intervention points and feature requirements. I rapidly developed wireframes for review with PMs, harnessing their insights to innovate and solve problems effectively.</p>
+			</div>
+
+			<div class="line">
+				<h2>Resolution</h2>
+				<p>Flexible Data Ontology</p>
+				<figure class="figure mb-2">
+					<img src="../img/charge/g1.png" class="figure-img img-fluid" alt="...">
+					<figcaption class="figure-caption mt-1">Customer, Site, and Order views</a></figcaption>
+				</figure>
+
+				<!-- <div class="row">
+					<div class="col-7">
+						<p>While I started designing with a single point of entry in mind (orders as the primary "unit"), it became clear that some flexibility in the ontology was necessary to accomodate the many different types ofcustomers. Some will have one order for one site, others will have multiple orders going to multiple sites. Some projects can be done within a few months, others take years.</p>
+					</div>
+					<div class="col-5">
+						<figure class="figure mb-2">
+							<img src="../img/charge/gont.png" class="figure-img img-fluid" alt="Diagram of the relationship between different elements"><figcaption class="figure-caption mt-1">Relationship between different elements</a></figcaption>
+						</figure>
+					</div>
+				</div> -->
+
+
+						<p>While I started designing with a single point of entry in mind (orders as the primary "unit"), it became clear that some flexibility in the ontology was necessary to accomodate the many types of customers. Some will have one order for one site, others will have multiple orders going to multiple sites. Some projects can be done within a few months, others take years. Presenting multiple entry poins (orders, sites, customers) allows ChargePoint representatives to untangle and manage customers according to their own personal mental models.</p>
+			
+						<!-- <figure class="figure mb-2">
+							<img src="../img/charge/gont.png" class="figure-img img-fluid" alt="Diagram of the relationship between different elements"><figcaption class="figure-caption mt-1">Relationship between different elements</a></figcaption>
+						</figure>
+ -->
+
+				<figure class="figure mb-2">
+					<img src="../img/charge/g2.png" class="figure-img img-fluid" alt="Order and order timeline views">
+					<figcaption class="figure-caption mt-1">Order and Order Timeline views</a></figcaption>
+				</figure>
+
+				<p>A Gant chart view of each order and site's progress ensures customers are aware of the project timeline and necessary steps they need to take to ensure timely charger delivery and install.</p>
+
+
+				<figure class="figure mb-2">
+					<img src="../img/charge/g3.png" class="figure-img img-fluid" alt="A customer's site and site information views">
+					<figcaption class="figure-caption mt-1">A customer's Site and Site Information views</a></figcaption>
+				</figure>
+
+				<p>Data collection is centralized within the Guardian product. ChargePoint staff and customers can easily see where data is inaccurate or missing and work concurrently to resolve data issues. Customers that are confused by data requests can quickly and easily access relevant documentation or reach support for clarification.</p>
+			</div>
+
+
+		</div>
+	</div>
+
+</body>
+

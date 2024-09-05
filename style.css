@@ -86,3 +86,9 @@ iframe{
 	color: #656565;
 	font-style: italic;
 }
+
+figcaption{
+	font-size: .75rem;
+	color: #656565;
+	/* text-transform: uppercase; */
+}
